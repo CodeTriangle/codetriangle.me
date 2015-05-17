@@ -1,3 +1,4 @@
-CodeTriangle's github.io repository
+#CodeTriangle's github.io repository
 
-[goto site](CodeTriangle.github.io)
+This is the main site for all things CodeTriangle.
+[Click here to go to the site](CodeTriangle.github.io).
