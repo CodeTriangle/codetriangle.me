@@ -2,7 +2,7 @@ body
 {
   background-color: black;
   color: white;
-  font-family: "Consolas"
+  font-family: "Inconsolata", monospace;
 }
 
 h1
