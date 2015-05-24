@@ -10,6 +10,10 @@ h1 {
   color: #00FF00
 }
 
+h1::before {
+    content: "> ";
+}
+
 .center {
   display: block;
   margin-left: auto;

@@ -1,12 +1,9 @@
-body {
-  background: black;
-}
-
 #ctr-nav {
   z-index: 30;
   font-family: "Inconsolata", monospace;
   margin: 0 auto;
   float: center;
+  background: black;
 }
 
 #ctr-nav ul li {
@@ -20,13 +17,18 @@ body {
 	margin: 0 1px 0 0;
 	padding: 5px 10px;
 	color: #0f0;
-  background: #333;
+  border: solid 1px #333;
 	text-align: center;
 	text-decoration: none;
+  -webkit-transition: color .4s ease-in-out, border .4s ease-in-out;
+  transition: color .4s ease-in-out, border .4s ease-in-out;
 }
 
-#ctr-nav ul li a.clickable:hover, #ctr-nav ul.sub li a:hover {
+#ctr-nav ul li a:hover {
   color: #090;
+  border: solid 1px #555;
+  -webkit-transition: color .4s ease-in-out, border .4s ease-in-out;
+  transition: color .4s ease-in-out, border .4s ease-in-out;
 }
 
 #ctr-nav ul.sub {
