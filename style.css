@@ -33,3 +33,8 @@ a.button {
   margin-right: auto;
   text-align: center;
 }
+
+img.icon {
+  width: 100px;
+  height: 100px;
+}
