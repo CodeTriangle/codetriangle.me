@@ -1,5 +1,6 @@
 body {
-  background-image: url("bg.png")
+  background-image: url("bg.png");
+  font-family: "Palatino Linotype", "Times New Roman", times, serif;
 }
 
 h1 { color: #FFF}
