@@ -1,16 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text);
+
 body {
   background-image: url("bg.png");
-  font-family: "Palatino Linotype", "Times New Roman", times, serif;
+  font-family: "Crimson Text";
+  color: #FFF
 }
 
-h1 { color: #FFF}
+h1 { color: #000}
 
-h2 { color: #DDD}
+h2 { color: #222}
 
-h3 { color: #BBB}
+h3 { color: #444}
 
-h4 { color: #999}
+h4 { color: #666}
 
-h5 { color: #777}
+h5 { color: #888}
 
-h6 { color: #555}
+h6 { color: #AAA}
