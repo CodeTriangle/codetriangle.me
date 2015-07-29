@@ -14,7 +14,7 @@
 
     <p id=display style="text-align: center; font: 75pt Inconsolata, Courier, monospace;"></p>
     <p style="text-align: center; font: 20pt monospace;">
-      seconds until next Cooking with Terry the Triangle Episode is Live!
+      until next <i>Cooking with Terry the Triangle</i> Episode is Live!
     </p>
 
     <script>
@@ -22,7 +22,11 @@
       var next = 1438192800000;
       var now;
 
-      window.setInterval(function() {update()}, 1)
+      var minute = 60;
+      var hour =  minute * 60;
+      var day = hour * 24;
+
+      window.setInterval(function() {update()}, 1000)
 
       function update() {
         now = Date.now();
@@ -32,9 +36,54 @@
         }
 
         var time = document.getElementById("display");
-        var until = (next - now) / 1000;
-        until = until.toFixed(3);
-        time.innerHTML = until;
+        var until = Math.floor((next - now) / 1000);
+
+        var untilDay = Math.floor(until / day);
+        until = Math.floor(until % day);
+
+        var untilHour = Math.floor(until / hour);
+        until = Math.floor(until % hour);
+
+        var untilMin = Math.floor(until / minute);
+        until = Math.floor(until % minute);
+
+        var untilString = untilDay.toString();
+
+        /*untilCalcSmall(untilDay, untilString)
+
+        untilCalcSmall(untilHour, untilString);
+
+        untilCalcSmall(untilMin, untilString);
+
+        untilCalcSmall(until, untilString);*/
+
+        if (untilHour < 10) {
+          untilString = untilString + ":0" + untilHour;
+        } else {
+          untilString = untilString + ":" + untilHour;
+        }
+
+        if (untilMin < 10) {
+          untilString = untilString + ":0" + untilMin;
+        } else {
+          untilString = untilString + ":" + untilMin;
+        }
+
+        if (until < 10) {
+          untilString = untilString + ":0" + until;
+        } else {
+          untilString = untilString + ":" + until;
+        }
+
+        time.innerHTML = untilString;
+      }
+
+      function untilCalcSmall(i, s) {
+        if (i < 10) {
+          s = s + ":0" + i;
+        } else {
+          s = s + ":" + i;
+        }
       }
     </script>
   </body>
