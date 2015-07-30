@@ -13,7 +13,7 @@
   <body>
 
     <p id=display style="text-align: center; font: 75pt Inconsolata, Courier, monospace;"></p>
-    <p style="text-align: center; font: 20pt monospace;">
+    <p style="text-align: center; font: 20pt Inconsolata, Courier, monospace;">
       until next <i>Cooking with Terry the Triangle</i> Episode is Live!
     </p>
 
@@ -26,7 +26,7 @@
       var hour =  minute * 60;
       var day = hour * 24;
 
-      window.setInterval(function() {update()}, 1000)
+      window.setInterval(function() {update()}, 10)
 
       function update() {
         now = Date.now();
@@ -36,18 +36,20 @@
         }
 
         var time = document.getElementById("display");
-        var until = Math.floor((next - now) / 1000);
+        var until = (next - now) / 1000;
 
         var untilDay = Math.floor(until / day);
-        until = Math.floor(until % day);
+        until = until % day;
 
         var untilHour = Math.floor(until / hour);
-        until = Math.floor(until % hour);
+        until = until % hour;
 
         var untilMin = Math.floor(until / minute);
-        until = Math.floor(until % minute);
+        until = until % minute;
 
-        var untilString = untilDay.toString();
+        until = until.toFixed(2);
+
+        var untilString;
 
         /*untilCalcSmall(untilDay, untilString)
 
@@ -57,28 +59,38 @@
 
         untilCalcSmall(until, untilString);*/
 
-        if (untilHour < 10) {
-          untilString = untilString + ":0" + untilHour;
+        if (untilDay != 0) {
+          untilString = untilDay.toString() + ":";
         } else {
-          untilString = untilString + ":" + untilHour;
+          untilString = "";
+        }
+
+        if (untilHour < 10 && untilHour != 0) {
+          untilString = untilString + "0" + untilHour + ":";
+        } /*else if (untilHour === 0) {
+          untilString = untilString;
+        }*/ else {
+          untilString = untilString + untilHour + ":";
         }
 
         if (untilMin < 10) {
-          untilString = untilString + ":0" + untilMin;
-        } else {
-          untilString = untilString + ":" + untilMin;
+          untilString = untilString + "0" + untilMin + ":";
+        } /*else if (untilMin === 0) {
+          untilString = untilString;
+        }*/ else {
+          untilString = untilString + untilMin + ":";
         }
 
         if (until < 10) {
-          untilString = untilString + ":0" + until;
+          untilString = untilString + "0" + until;
         } else {
-          untilString = untilString + ":" + until;
+          untilString = untilString + until;
         }
 
         time.innerHTML = untilString;
       }
 
-      function untilCalcSmall(i, s) {
+      function untilCalc(i, s) {
         if (i < 10) {
           s = s + ":0" + i;
         } else {
