@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Next Terry the Triangle Video Timer</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+    body {
+      font-family: "Palatino Linotype", "Times New Roman", times, serif;
+      margin: 0;
+    }
+
+    .cbg {
+      background: no-repeat center center;
+      background-attachment:fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    div {
+      padding: 3em;
+    }
+
+    .sm {
+      font-size: 20pt;
+    }
+
+    .lg {
+      font-size: 50pt;
+    }
+    </style>
+
+    <meta name="viewport" content="width=device-width, intital-scale: 1.0">
+  </head>
+  <body>
+    <div class="sm" style="color: white; background-color: #00b; padding: 1em">
+      Welcome to the Terry Timer!
+    </div>
+    <div class="cbg" style="background-image: url(kitchen.png); padding-left: 3em; height: 800px">
+      <span class="sm">There are...</span><br>
+      <span class="lg" id="main-days"></span><br>
+      <span class="lg" id="main-hours"></span><br>
+      <span class="lg" id="main-mins"></span><br>
+      <span class="sm">and</span><br>
+      <span class="lg" id="main-secs"></span><br>
+      <span class="sm">until the next <i>Cooking with Terry the Triangle</i> episode.</span>
+    </div>
+    <div style="color: white; background-color: black">
+      <span class="sm">In total, that's...</span><br>
+      <span class="lg" id="totals-millis"></span><br>
+      <span class="lg" id="totals-seconds"></span><br>
+      <span class="lg" id="totals-minutes"></span><br>
+      <span class="sm">or</span><br>
+      <span class="lg" id="totals-hours"></span><br>
+    </div>
+    <div style="background: gray">
+      <span class="sm">The Unix Timestamp right now is</span><br>
+      <span class="lg" id="timestamp-now"></span><br>
+      <span class="sm">The Unix Timestamp when it will be released is</span><br>
+      <span class="lg" id="timestamp-release"></span>
+    </div>
+    <div class="cbg" style="background-image: url(terry.png); text-align:center">
+      <span class="sm">To <b>NEVER</b> miss an episode of Cooking with Terry, subscribe to him on YouTube!</span><br><br><br><br><br><br>
+      <a href="https://www.youtube.com/channel/UCN0GNSzbQBGDIQ5SuxvOh0w"><img src="youtube.png" style="width: 300px"></a><br><br><br><br><br><br>
+      <span class="sm">And you will be notified every time she uploads <b>ANYTHING!</b></span>
+    </div>
+
+    <script>
+    var interval = 1296000000;
+    var next = 1440784800000;
+    var now;
+
+    var minute = 60;
+    var hour =  minute * 60;
+    var day = hour * 24;
+
+    while (now > next) {
+      next += interval;
+    }
+
+    window.setInterval(function() {update()}, 1);
+
+    function update() {
+      now = Date.now();
+
+      var until = (next - now) / 1000;
+      var untilMillis = next - now;
+
+      var untilDay = Math.floor(until / day);
+      until = until % day;
+
+      var untilHour = Math.floor(until / hour);
+      until = until % hour;
+
+      var untilMin = Math.floor(until / minute);
+      until = until % minute;
+
+      var untilSec = Math.floor(until);
+
+      var untilTotalSec = Math.floor(untilMillis / 1000);
+      var untilTotalMin = Math.floor(untilMillis / (1000 * minute));
+      var untilTotalHour = Math.floor(untilMillis / (1000 * hour));
+
+      document.getElementById("main-days").innerHTML = untilDay + " days,";
+      document.getElementById("main-hours").innerHTML = untilHour + " hours,";
+      document.getElementById("main-mins").innerHTML = untilMin + " minutes,";
+      document.getElementById("main-secs").innerHTML = untilSec + " seconds";
+      document.getElementById("totals-millis").innerHTML = untilMillis + " milliseconds,";
+      document.getElementById("totals-seconds").innerHTML = untilTotalSec + " seconds,";
+      document.getElementById("totals-minutes").innerHTML = untilTotalMin + " minutes,";
+      document.getElementById("totals-hours").innerHTML = untilTotalHour + " hours";
+      document.getElementById("timestamp-now").innerHTML = Math.floor(now / 1000);
+      document.getElementById("timestamp-release").innerHTML = next / 1000;
+    }
+    </script>
+  </body>
+</html>
