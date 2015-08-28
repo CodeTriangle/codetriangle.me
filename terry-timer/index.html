@@ -73,7 +73,7 @@
       <span class="sm">Assuming Terry works at a nonstop rate, the episode is</span><br>
       <span class="lg" id="percent-percent"></span><br>
       <span class="sm">done.</span><br>
-      <meter id="percent-bar"></meter>
+      <meter id="percent-bar" style="width=100%;" ></meter>
     </div>
     <div class="cbg" style="background-image: url(terry.png); text-align:center">
       <span class="sm">To <b>NEVER</b> miss an episode of Cooking with Terry, subscribe to him on YouTube!</span><br><br><br><br><br><br>
@@ -117,8 +117,11 @@
       var untilTotalMin = Math.floor(untilMillis / (1000 * minute));
       var untilTotalHour = Math.floor(untilMillis / (1000 * hour));
       
+      var untilP = Math.floor((next - now) / 1000)
       var secondsInterval = Math.floor(interval / 1000);
-      var secondsSinceLast = Math.floor(secondsInterval - ((next - now) / 1000));
+      var secondsSinceLast = secondsInterval - untilP;
+      
+      var bar = document.getElementById("percent-bar")
 
       document.getElementById("main-days").innerHTML = untilDay + " days,";
       document.getElementById("main-hours").innerHTML = untilHour + " hours,";
@@ -132,7 +135,10 @@
       document.getElementById("timestamp-release").innerHTML = next / 1000;
       document.getElementById("percent-fromlast").innerHTML = secondsSinceLast;
       document.getElementById("percent-total").innerHTML = secondsInterval;
-      document.getElementById("percent-percent").innerHTML = Math.floor((((next - now) - secondsSinceLast) / secondsInterval) * 100);
+      document.getElementById("percent-percent").innerHTML = Math.floor((untilP / secondsInterval) * 100) + "%";
+      bar.setAttribute("min", "0");
+      bar.setAttribute("max", secondsInterval)
+      bar.setAttribute("value", untilP)
     }
     </script>
   </body>
