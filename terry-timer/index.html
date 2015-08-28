@@ -117,8 +117,8 @@
       var untilTotalMin = Math.floor(untilMillis / (1000 * minute));
       var untilTotalHour = Math.floor(untilMillis / (1000 * hour));
       
-      var secondsSinceLast = Math.floor((next - now) / 1000);
       var secondsInterval = Math.floor(interval / 1000);
+      var secondsSinceLast = Math.floor(secondsInterval - ((next - now) / 1000));
 
       document.getElementById("main-days").innerHTML = untilDay + " days,";
       document.getElementById("main-hours").innerHTML = untilHour + " hours,";
