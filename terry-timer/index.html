@@ -132,7 +132,7 @@
       document.getElementById("timestamp-release").innerHTML = next / 1000;
       document.getElementById("percent-fromlast").innerHTML = secondsSinceLast;
       document.getElementById("percent-total").innerHTML = secondsInterval;
-      document.getElementById("percent-percent").innerHTML = Math.floor(((secondsInterval - secondsSinceLast) / secondsInterval) * 100);
+      document.getElementById("percent-percent").innerHTML = Math.floor((((next - now) - secondsSinceLast) / secondsInterval) * 100);
     }
     </script>
   </body>
