@@ -117,8 +117,8 @@
       var untilTotalMin = Math.floor(untilMillis / (1000 * minute));
       var untilTotalHour = Math.floor(untilMillis / (1000 * hour));
       
-      var secondsSinceLast = (next - now) / 1000;
-      var secondsInterval = interval / 1000;
+      var secondsSinceLast = Math.floor((next - now) / 1000);
+      var secondsInterval = Math.floor(interval / 1000);
 
       document.getElementById("main-days").innerHTML = untilDay + " days,";
       document.getElementById("main-hours").innerHTML = untilHour + " hours,";
@@ -132,7 +132,7 @@
       document.getElementById("timestamp-release").innerHTML = next / 1000;
       document.getElementById("percent-fromlast").innerHTML = secondsSinceLast;
       document.getElementById("percent-total").innerHTML = secondsInterval;
-      document.getElementById("percent-percent").innerHTML = (secondsInterval - secondsSinceLast) / secondsInterval;
+      document.getElementById("percent-percent").innerHTML = Math.floor(((secondsInterval - secondsSinceLast) / secondsInterval) * 100);
     }
     </script>
   </body>
