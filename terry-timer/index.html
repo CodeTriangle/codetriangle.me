@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>Next Terry the Triangle Video Timer</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <style>
     body {
-      font-family: "Palatino Linotype", "Times New Roman", times, serif;
+      font-family: helvetica, arial, sans-serif;
       margin: 0;
     }
 
@@ -24,7 +24,7 @@
     }
 
     div {
-      padding: 3em;
+      padding: 10px;
     }
 
     .sm {
@@ -67,10 +67,10 @@
     <meta name="viewport" content="width=device-width, intital-scale: 1.0">
   </head>
   <body>
-    <div class="sm" style="color: white; background-color: #00b; padding: 1em">
-      Welcome to the Terry Timer!
-    </div>
-    <div class="cbg" style="background-image: url(kitchen.png); padding-left: 3em; height: 800px">
+    <div class="cbg" style="background-image: url(kitchen.png); height: 800px">
+      <div style="color: white; background-color: rgba(0,64,128,0.5); font: 30pt 'Alfa Slab One">
+        Welcome to the Terry Timer!
+      </div>
       <span class="sm">There are...</span><br>
       <span class="lg" id="main-days"></span><br>
       <span class="lg" id="main-hours"></span><br>
@@ -87,13 +87,13 @@
       <span class="sm">or</span><br>
       <span class="lg" id="totals-hours"></span><br>
     </div>
-    <div style="color: white; background-color: #222">
+    <div style="color: white; background-color: #555">
       <span class="sm">The Unix Timestamp right now is</span><br>
       <span class="lg" id="timestamp-now"></span><br>
       <span class="sm">The Unix Timestamp when it will be released is</span><br>
       <span class="lg" id="timestamp-release"></span>
     </div>
-    <div style="color: black; background-color: #444">
+    <div style="color: white; background-color: #AAA">
       <span class="lg" id="percent-fromlast"></span><br>
       <span class="sm">seconds have passed since last episode came out.</span><br>
       <span class="sm">The amount of seconds between episodes is</span><br>
@@ -101,26 +101,30 @@
       <span class="sm">Assuming Terry works at a nonstop rate, the episode is</span><br>
       <span class="lg" id="percent-percent"></span><br>
       <span class="sm">done.</span><br>
-      <meter id="percent-bar" style="width:100%;" ></meter>
+      <meter id="percent-bar" style="width:100%"></meter>
     </div>
     <div class="cbg" style="background-image: url(terry.png); text-align:center">
-      <span class="sm">To <b>NEVER</b> miss an episode of Cooking with Terry, subscribe to him on YouTube!</span><br><br><br><br><br><br>
-      <a href="https://www.youtube.com/channel/UCN0GNSzbQBGDIQ5SuxvOh0w"><img src="youtube.png" style="width: 300px"></a><br><br><br><br><br><br>
+      <span class="sm">To <b>NEVER</b> miss an episode of Cooking with Terry, subscribe to him on YouTube!</span><br>
+      <a href="https://www.youtube.com/channel/UCN0GNSzbQBGDIQ5SuxvOh0w"><img src="youtube.png" style="width: 300px; margin: 150px"></a><br>
       <span class="sm">And you will be notified every time she uploads <b>ANYTHING!</b></span>
     </div>
-    <div style="color: black; background-color: #666">
+    <div style="color: white; background-color: black">
       <span class="lg" id="legacy-days"></span><br>
       <span class="lg" id="legacy-hours"></span><br>
       <span class="lg" id="legacy-minutes"></span><br>
       <span class="sm">and</span><br>
       <span class="lg" id="legacy-seconds"></span><br>
-      <span class="sm">have passed since the show's inception.</span><br><hr>
+      <span class="sm">have passed since the show's inception.</span><br>
+    </div>
+    <div style="color: white; background-color: #555">
       <span class="sm">That is a total of...</span><br>
       <span class="lg" id="legacy-totals-millis"></span><br>
       <span class="lg" id="legacy-totals-seconds"></span><br>
       <span class="lg" id="legacy-totals-minutes"></span><br>
       <span class="sm">or</span><br>
-      <span class="lg" id="legacy-totals-hours"></span><br><hr>
+      <span class="lg" id="legacy-totals-hours"></span><br>
+    </div>
+    <div style="color: white; background-color: #AAA">
       <span class="sm">The Unix Timestamp when it was released was...</span><br>
       <span class="lg" id="legacy-timestamp-release"></span>
     </div>
