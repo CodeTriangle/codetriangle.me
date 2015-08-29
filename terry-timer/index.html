@@ -34,6 +34,34 @@
     .lg {
       font-size: 50pt;
     }
+
+    meter {
+      background: #EEE;
+      box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+      border-radius: 3px;
+    }
+
+    meter::-webkit-meter-bar {
+      background: #EEE;
+      box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+      border-radius: 3px;
+    }
+
+    meter::-moz-meter-bar {
+      background: #EEE;
+      box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+      border-radius: 3px;
+    }
+
+    meter::-webkit-meter-optimum-value {
+      background: #333;
+      border-radius: 3px;
+    }
+
+    meter:-moz-meter-optimum::-moz-meter-bar {
+      background: #333;
+      border-radius: 3px;
+    }
     </style>
 
     <meta name="viewport" content="width=device-width, intital-scale: 1.0">
@@ -59,13 +87,13 @@
       <span class="sm">or</span><br>
       <span class="lg" id="totals-hours"></span><br>
     </div>
-    <div style="color: white; background-color: #252525">
+    <div style="color: white; background-color: #222">
       <span class="sm">The Unix Timestamp right now is</span><br>
       <span class="lg" id="timestamp-now"></span><br>
       <span class="sm">The Unix Timestamp when it will be released is</span><br>
       <span class="lg" id="timestamp-release"></span>
     </div>
-    <div style="color: white; background-color: #555">
+    <div style="color: black; background-color: #444">
       <span class="lg" id="percent-fromlast"></span><br>
       <span class="sm">seconds have passed since last episode came out.</span><br>
       <span class="sm">The amount of seconds between episodes is</span><br>
@@ -80,27 +108,46 @@
       <a href="https://www.youtube.com/channel/UCN0GNSzbQBGDIQ5SuxvOh0w"><img src="youtube.png" style="width: 300px"></a><br><br><br><br><br><br>
       <span class="sm">And you will be notified every time she uploads <b>ANYTHING!</b></span>
     </div>
+    <div style="color: black; background-color: #666">
+      <span class="lg" id="legacy-days"></span><br>
+      <span class="lg" id="legacy-hours"></span><br>
+      <span class="lg" id="legacy-minutes"></span><br>
+      <span class="sm">and</span><br>
+      <span class="lg" id="legacy-seconds"></span><br>
+      <span class="sm">have passed since the show's inception.</span><br><hr>
+      <span class="sm">That is a total of...</span><br>
+      <span class="lg" id="legacy-totals-millis"></span><br>
+      <span class="lg" id="legacy-totals-seconds"></span><br>
+      <span class="lg" id="legacy-totals-minutes"></span><br>
+      <span class="sm">or</span><br>
+      <span class="lg" id="legacy-totals-hours"></span><br><hr>
+      <span class="sm">The Unix Timestamp when it was released was...</span><br>
+      <span class="lg" id="legacy-timestamp-release"></span>
+    </div>
 
     <script>
     var interval = 1296000000;
     var next = 1440806400000;
+    var first = 1418829000000;
     var now;
 
     var minute = 60;
     var hour =  minute * 60;
     var day = hour * 24;
 
-    while (now > next) {
-      next += interval;
-    }
-
     window.setInterval(function() {update()}, 1);
 
     function update() {
       now = Date.now();
 
+      while (now > next) {
+        next += interval;
+      }
+
       var until = (next - now) / 1000;
       var untilMillis = next - now;
+      var untilLegacy = (now - first) / 1000;
+      var millisSinceFirst = now - first;
 
       var untilDay = Math.floor(until / day);
       until = until % day;
@@ -113,14 +160,29 @@
 
       var untilSec = Math.floor(until);
 
+      var daysSinceFirst = Math.floor(untilLegacy / day);
+      untilLegacy = untilLegacy % day;
+
+      var hoursSinceFirst = Math.floor(untilLegacy / hour);
+      untilLegacy = untilLegacy % hour;
+
+      var minutesSinceFirst = Math.floor(untilLegacy / minute);
+      untilLegacy = untilLegacy % minute;
+
+      var secondsSinceFirst = Math.floor(untilLegacy);
+
       var untilTotalSec = Math.floor(untilMillis / 1000);
       var untilTotalMin = Math.floor(untilMillis / (1000 * minute));
       var untilTotalHour = Math.floor(untilMillis / (1000 * hour));
-      
+
+      var totalSecondsSinceFirst = Math.floor(millisSinceFirst / 1000);
+      var totalMinutesSinceFirst = Math.floor(millisSinceFirst / (1000 * minute));
+      var totalHoursSinceFirst = Math.floor(millisSinceFirst / (1000 * hour));
+
       var untilP = Math.floor((next - now) / 1000)
       var secondsInterval = Math.floor(interval / 1000);
       var secondsSinceLast = secondsInterval - untilP;
-      
+
       var bar = document.getElementById("percent-bar")
 
       document.getElementById("main-days").innerHTML = untilDay + " days,";
@@ -137,8 +199,17 @@
       document.getElementById("percent-total").innerHTML = secondsInterval;
       document.getElementById("percent-percent").innerHTML = Math.floor((secondsSinceLast / secondsInterval) * 100) + "%";
       bar.setAttribute("min", "0");
-      bar.setAttribute("max", secondsInterval)
-      bar.setAttribute("value", secondsSinceLast)
+      bar.setAttribute("max", secondsInterval);
+      bar.setAttribute("value", secondsSinceLast);
+      document.getElementById("legacy-days").innerHTML = daysSinceFirst + " days,";
+      document.getElementById("legacy-hours").innerHTML = hoursSinceFirst + " hours,";
+      document.getElementById("legacy-minutes").innerHTML = minutesSinceFirst + " minutes,";
+      document.getElementById("legacy-seconds").innerHTML = secondsSinceFirst + " seconds,";
+      document.getElementById("legacy-totals-millis").innerHTML = millisSinceFirst + " milliseconds,";
+      document.getElementById("legacy-totals-seconds").innerHTML = totalSecondsSinceFirst + " seconds,";
+      document.getElementById("legacy-totals-minutes").innerHTML = totalMinutesSinceFirst + " minutes,";
+      document.getElementById("legacy-totals-hours").innerHTML = totalHoursSinceFirst + " hours";
+      document.getElementById("legacy-timestamp-release").innerHTML = first / 1000;
     }
     </script>
   </body>
