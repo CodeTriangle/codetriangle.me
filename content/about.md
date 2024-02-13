@@ -37,9 +37,11 @@ on this site in the future:
 * Unix-like operating systems
 * Text editing
 * Text encoding
+* Network protocols
 * Microcontrollers
 * Nintendo games and consoles
 * Indie games
 * Competitive Splatoon
 * The works of Brandon Sanderson
+* Webcomics
 * Animation
