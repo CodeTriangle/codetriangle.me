@@ -25,10 +25,6 @@ highlight_theme = "gruvbox-dark"
 # Put all your custom variables here
 
 [[extra.main_menu]]
-name = "About"
-url = "@/about.md"
-
-[[extra.main_menu]]
 name = "Blog"
 url = "@/blog/_index.md"
 
