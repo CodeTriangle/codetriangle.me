@@ -14,3 +14,11 @@ instead, they reflect the time
 I decided to write about them).
 Alternatively, I will include
 a curated list below.
+
+## [Mastermind](@/projects/2024-02-12.mastermind.md)
+
+![A completed game of Mastermind](/images/projects/microcontroller-success.jpg)
+
+An implementation of the classic board game Mastermind
+using an STM32L476RG microcontroller
+and an LED sheet.
