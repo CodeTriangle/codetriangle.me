@@ -111,6 +111,18 @@
     font-size: small;
   }
 
+  #toc ol {
+    counter-reset: item;
+  }
+
+  #toc li {
+    counter-increment: item;
+  }
+
+  #toc li::marker {
+    content: counters(item, ".") ". ";
+  }
+
   /* blog posts */
   ul.blog-posts {
     list-style-type: none;
