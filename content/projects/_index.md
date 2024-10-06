@@ -15,6 +15,14 @@ I decided to write about them).
 Alternatively, I will include
 a curated list below.
 
+## [SSH Cheatsheet](@/projects/2024-10-06.ssh-cheatsheet.md)
+
+A useful reference
+for the effective use
+of the OpenSSH client.
+Proven to be valuable
+for newbies and veterans alike.
+
 ## [Mastermind](@/projects/2024-02-12.mastermind.md)
 
 ![A completed game of Mastermind](/images/projects/microcontroller-success.jpg)
