@@ -3,7 +3,7 @@ title: CodeTriangle's Blog
 ---
 
 Hey there!
-I'm Richard, or CodeTriangle, or Trungle, or Trongle,
+I'm Richard, or CodeTriangle, or Trungle, or Trongle, or RMS,
 depending on where you know me from.
 Welcome to my blog,
 my largely unfocused collection
