@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>CodeTriangle&#x27;s Curiosities - git</title>
+    <link href="https://codetriangle.me/tags/git/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://codetriangle.me"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-17T00:00:00+00:00</updated>
+    <id>https://codetriangle.me/tags/git/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Subversion Deserves a Passing Thought Every Once in a While</title>
+        <published>2024-07-17T00:00:00+00:00</published>
+        <updated>2024-07-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://codetriangle.me/blog/2024-07-17-subversion/" type="text/html"/>
+        <id>https://codetriangle.me/blog/2024-07-17-subversion/</id>
+        
+        <content type="html">&lt;p&gt;Recently, for work, I&#x27;ve been learning Subversion
+(or, for brevity, SVN).
+I have some thoughts,
+which I had been sharing with some friends on Discord.
+After they expressed some interest in a more complete,
+more well-thought-out version
+of my thoughts,
+I decided to turn my thoughts into this blog&#x27;s inaugural post.&lt;&#x2F;p&gt;
+&lt;p&gt;I, like many people,
+learned version control using git.
+My first brush with the concept of a VCS
+came with my first brush with Java,
+when, within my first tutorial,
+I was recommended to use the Eclipse IDE
+and GitHub.&lt;&#x2F;p&gt;
+&lt;p&gt;GitHub, obviously, has only grown in popularity
+since its inception
+to the extent that,
+up until recently,
+I have never had to use anything other than git
+for any project I&#x27;ve ever wanted
+or needed to contribute to.
+I was aware of SVN
+but only as the second member
+on every list of version control systems.
+I had also at one point been on the hompeage of &lt;a href=&quot;https:&#x2F;&#x2F;www2.fossil-scm.org&#x2F;home&#x2F;doc&#x2F;trunk&#x2F;www&#x2F;index.wiki&quot;&gt;Fossil&lt;&#x2F;a&gt;
+for whatever that&#x27;s worth
+and had heard whisperings
+of something called Mercurial.&lt;&#x2F;p&gt;
+&lt;p&gt;Recently, however,
+I&#x27;ve become involved with several projects at work
+which use SVN instead of git.
+So I sat myself down at my desk,
+pulled up &lt;a href=&quot;https:&#x2F;&#x2F;svnbook.red-bean.com&#x2F;&quot;&gt;the SVN book&lt;&#x2F;a&gt;
+and prepared myself to be open-minded.
+I love git,
+and am a great promoter of its use,
+but I was willing to entertain
+the alternate side of the debate.&lt;&#x2F;p&gt;
+&lt;p&gt;I am a few hours more experienced with Subversion now after
+skimming chapter one,
+studying chapter two and chapter three pretty intently
+and, a bit later,
+marathoning chapter four.
+And I have some thoughts.&lt;&#x2F;p&gt;
+&lt;p&gt;Before we continue further,
+I&#x27;d like to lay down some expectations.
+I expect the audience to have used git before
+and to be able to understand all of its basic commands,
+namely, &lt;code&gt;branch&lt;&#x2F;code&gt;, &lt;code&gt;tag&lt;&#x2F;code&gt;, and &lt;code&gt;merge&lt;&#x2F;code&gt;.
+No knowledge of Subversion is required
+as this article is meant to educate git users
+on the differences between the two.
+In fact, the less you know about Subversion,
+the smarter I&#x27;ll look.
+If I misstate something,
+maybe consider forgetting a bit about Subversion
+so that I can keep up the illusion.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-one-big-difference&quot;&gt;The One Big Difference&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s address the one main point first.
+Almost all of the differences between svn and git
+inspire fascinating debates
+about the design of VCS tools
+and, even more generally,
+of computer tools in general.
+How should various tools be made to fit together?
+How much structure should a system enforce on its user?
+These are questions
+that I have every intent of circling back to,
+but those differences are eclipsed
+by the fact that SVN is the popular centralized VCS
+and git is the popular distributed VCS.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;distributed-vs-centralized&quot;&gt;Distributed vs. Centralized&lt;&#x2F;h3&gt;
+&lt;p&gt;In a distributed model like git&#x27;s,
+(which I assume the reader is more familiar with)
+every user downloads the full history
+of the repository to their computer,
+makes changes,
+commits those changes locally,
+then pushes those commits to the server.&lt;&#x2F;p&gt;
+&lt;p&gt;In a centralized model like Subversion&#x27;s,
+the only complete copy of the repository
+with all the history intact
+is stored on the server.
+Each user&#x27;s working copy
+tracks exactly one revision at a time.
+Creating a commit in Subversion
+updates the one canonical tree
+on the server
+to match your working copy.
+The &amp;quot;commit&amp;quot; and &amp;quot;push&amp;quot; options are therefore
+one and the same.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;svn-is-an-always-online-game&quot;&gt;SVN is an Always-Online Game&lt;&#x2F;h3&gt;
+&lt;p&gt;In comparison to a distributed model,
+a centralized model is much simpler.
+Having multiple copies of the same tree
+(all with their own minimal modifications)
+stored on many different devices,
+whose changes must later be reconciled
+in event of any kind of conflict,
+is in theory much more cluttered and confusing
+than the inherent simplicity
+of a single canonical tree.
+Initial checkouts are additionally
+&lt;em&gt;significantly&lt;&#x2F;em&gt; faster
+due to the fact that only one revision
+needs to be downloaded.&lt;&#x2F;p&gt;
+&lt;p&gt;On the other hand,
+this means creating a commit
+requires an internet connection.
+As does interacting with the history of the repository
+in any form,
+including the simple act
+of showing a log.
+This naturally means that these operations
+take much longer to perform
+than the equivalent git commands,
+scaling with your network speed.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, reader, I have Xfinity,
+so my continuity of service is terrible.
+I can recall at least one incident every month
+where I was hacking on a project late at night
+and my modem would spontaneously turn off.
+I would pull up my Xfinity app,
+switch my phone to use mobile data,
+and confirm that, yep,
+there&#x27;s an outage in my area.
+As all of my current personal projects use git,
+this has never halted my development.
+Sure, I won&#x27;t be able to push,
+but I  have never had to take a break from coding
+due to an outage.&lt;&#x2F;p&gt;
+&lt;p&gt;(Also, Xfinity, I know that these aren&#x27;t
+&amp;quot;unexpected outages&amp;quot; like you keep on claiming.
+If you have to do maintenance on my network
+every night for three nights
+at the same time of day,
+you can just tell me that you&#x27;re doing maintenance.
+Also, you have my phone number,
+so there&#x27;s no reason not to send me a text
+when things like this happen.)&lt;&#x2F;p&gt;
+&lt;p&gt;This problem already occurred for me
+before I even made my first SVN commit!
+I had read the first three chapters of the SVN book,
+checked out a working copy of the repository,
+and finally, I was ready to start working on my branch
+when the SVN server started refusing my connections.
+I emailed the sysadmin for the SVN server
+to clarify the issue.
+Turns out, the server had gone down.
+It was for this exact reason
+that I decided to dig into the fourth chapter
+of the SVN book.&lt;&#x2F;p&gt;
+&lt;p&gt;Outages can and will happen.
+Because of that,
+it is crucial to plan around them.
+SVN still has no good answer to these questions.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-downside-of-distributed&quot;&gt;The Downside of Distributed&lt;&#x2F;h3&gt;
+&lt;p&gt;I would like to now bring up
+the best argument &lt;em&gt;for&lt;&#x2F;em&gt; centralized version control.
+This argument is made rather eloquently
+in two blog posts
+&lt;a href=&quot;http:&#x2F;&#x2F;blog.red-bean.com&#x2F;sussman&#x2F;?p=96&quot;&gt;(1)&lt;&#x2F;a&gt;
+&lt;a href=&quot;http:&#x2F;&#x2F;blog.red-bean.com&#x2F;sussman&#x2F;?p=20&quot;&gt;(2)&lt;&#x2F;a&gt;
+by Ben Collins-Sussman,
+one of the originators of Subversion.
+These are definitely worth a read.
+They&#x27;re short and sweet, but as fascinating
+as an article with ten times their word count.
+The basic gist involves two anti-patterns
+that centralized models encourage
+but decentralized models have limited protection against:
+bombing and caving.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Caving&lt;&#x2F;strong&gt; or &lt;strong&gt;crawling into a cave&lt;&#x2F;strong&gt;
+refers to the act of writing an entire new feature
+offline and without communicating with the team.
+&lt;strong&gt;Bombing&lt;&#x2F;strong&gt; or &lt;strong&gt;dropping a code bomb&lt;&#x2F;strong&gt;
+refers to the act of committing such a feature
+all in one go.
+When a user drops a code bomb,
+they deprive other collaborators of the ability to
+help design the feature,
+give input on code structure,
+and
+point out flaws in the feature&#x27;s implementation.&lt;&#x2F;p&gt;
+&lt;p&gt;When using a centralized VCS,
+it is very easy to see this behavior
+as maliciously anti-cooperative.
+It takes a significant amount of effort
+to never commit any of your changes
+until they&#x27;re all complete.
+Furthermore, lumping the entire feature
+together in one commit
+defeats the purpose of version control
+in the first place.
+Simply put,
+if you&#x27;re dropping a code bomb
+in a Subversion repository,
+you&#x27;re using Subversion wrong.&lt;&#x2F;p&gt;
+&lt;p&gt;git, on the other hand,
+seems to encourage this behavior
+by way of its very design.
+All development can be,
+and by default is,
+done without communicating
+with the project&#x27;s developers.
+With Subversion,
+you must go out of your way
+to avoid showing your work
+to other collaborators.
+With git,
+secrecy is the standard.
+GitHub takes this one step further
+by introducing the idea
+that you can and should
+create your own entire fork
+of the repository
+so that your code is never seen
+until you decide to show it off.
+It is possible to employ
+good version control practices
+with a distributed VCS,
+but it doesn&#x27;t promote these practices by default.&lt;&#x2F;p&gt;
+&lt;p&gt;This argument has grabbed hold of my mind
+as very few other concepts have
+in my entire career.
+This section was meant to be a paragraph
+expressing my opinion that yes,
+it&#x27;s important to actively pursue
+and gracefully receive code review,
+but that Subversion&#x27;s
+dependence on constant internet access
+is an intolerable price to pay
+for this benefit.
+I still do believe that,
+but in the process of learning these things
+I felt my philosophy on open-source contributing
+gradually shift,
+hence the much greater focus
+I have placed on these posts.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;my-lukewarm-take&quot;&gt;My Lukewarm Take&lt;&#x2F;h3&gt;
+&lt;p&gt;I don&#x27;t know if it&#x27;s possible
+to conclude this section
+in a satisfying way.
+If I had to try,
+I guess I would just say
+that I still firmly believe
+that a distributed VCS is better
+than a centralized one,
+but that we may find value
+looking towards the centralized model
+to provide a good example
+of how we may reconsider
+the structure of project contributions.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;other-differences&quot;&gt;Other Differences&lt;&#x2F;h2&gt;
+&lt;p&gt;It really is a shame
+that git is the popular distributed VCS
+and SVN is the popular centralized VCS
+because, beyond the difference
+in interaction model,
+there are plenty of fascinating debates to be had
+regarding the two systems&#x27; other differences,
+but those arguments rarely get the spotlight
+compared to the question
+of distributed vs. centralized.
+I&#x27;m clearly not above this
+(see how much longer the previous section is
+than any of the ones coming up?)
+but I did find some elements of the SVN book
+nothing less than fascinating.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-copy-operation&quot;&gt;The Copy Operation&lt;&#x2F;h3&gt;
+&lt;p&gt;One fascinating difference
+between SVN and git
+is the list of basic operations
+that you can perform on files.
+In git, these are
+create, modify, and delete.
+A move is performed
+by detecting the similarity
+of an added and a deleted file.
+Subversion has
+create, modify, and delete,
+just like git.
+But it also has copy.
+In particular,
+this preserves the file&#x27;s revision history
+for both the original
+and the copy.
+A move in Subversion
+is implemented as
+running &lt;code&gt;svn copy&lt;&#x2F;code&gt;
+followed by
+&lt;code&gt;svn delete&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I actually like
+how Subversion&#x27;s move operation
+is more explicit than git&#x27;s.
+git&#x27;s copy detection
+can be a bit finnicky at times
+if the move comes along
+with additional changes
+to the file being moved
+or, occasionally,
+the changes to other files.
+Plus,
+it just relies too much
+on the machine detecting your intentions,
+which I tend to distrust.&lt;&#x2F;p&gt;
+&lt;p&gt;But that&#x27;s not the only reason
+that &lt;code&gt;svn copy&lt;&#x2F;code&gt; is cool.
+Like I said,
+SVN&#x27;s copy operation
+maintains the history of the object.
+Under the hood, this works similarly
+to a UNIX hardlink
+where the underlying file object is the same,
+but it is simply accessed
+from different locations on the filesystem.
+Unlike a hardlink, though,
+the original and the copy
+can be modified separately
+from one another.&lt;&#x2F;p&gt;
+&lt;p&gt;Okay, but how often do you need to clone
+a file and work on a new copy
+on the same branch?
+True, that is a rare case.
+However, that&#x27;s not the only use case
+for &lt;code&gt;svn copy&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;branching-and-tagging&quot;&gt;Branching and Tagging&lt;&#x2F;h3&gt;
+&lt;p&gt;In git, branches and tags
+are features
+built directly into
+the core system.
+You may be surpised to hear
+that this is not necessarily the case
+in SVN.
+Branching and tagging
+are still supported,
+but not as separate operations.&lt;&#x2F;p&gt;
+&lt;p&gt;In Subversion,
+the root of the repository
+is generally not
+the root of the code.
+Instead, the main line of development
+usually lives in a directory called &lt;code&gt;trunk&lt;&#x2F;code&gt;
+and branches usually exist
+as copies of &lt;code&gt;trunk&lt;&#x2F;code&gt;
+placed inside of another root directory
+called &lt;code&gt;branches&lt;&#x2F;code&gt;.
+To create a branch
+called &lt;code&gt;feature-1&lt;&#x2F;code&gt;,
+the command to run
+from the root of the repository is:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;svn copy \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;    https:&#x2F;&#x2F;example.com&#x2F;svn&#x2F;project&#x2F;trunk \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;    https:&#x2F;&#x2F;example.com&#x2F;svn&#x2F;project&#x2F;branches&#x2F;feature-1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is an almost zero-cost operation
+on the server side
+because, remember,
+&lt;code&gt;svn copy&lt;&#x2F;code&gt; does not create new objects,
+just new links to old objects.
+By then using &lt;code&gt;svn switch&lt;&#x2F;code&gt;
+you can swap your working copy
+from tracking &lt;code&gt;trunk&lt;&#x2F;code&gt; to &lt;code&gt;branches&#x2F;feature-1&lt;&#x2F;code&gt;
+and commit as normal.&lt;&#x2F;p&gt;
+&lt;p&gt;Similarly,
+tags live as copies of &lt;code&gt;trunk&lt;&#x2F;code&gt;
+inside of &lt;code&gt;tags&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Crucially, this allows the project administrator
+much more leeway
+regarding how to structure the project.
+For example,
+the maintainers might decide
+to arrange branches and tags heirarchically,
+for instance,
+by giving each user
+a directory within &lt;code&gt;branches&lt;&#x2F;code&gt;;
+by creating different subdirectories
+for releases, betas, and RCs
+within &lt;code&gt;tags&lt;&#x2F;code&gt;;
+or by defying the traditional directory structure entirely.
+It all just depends
+on what works best
+for your project.&lt;&#x2F;p&gt;
+&lt;p&gt;In a really neat way,
+this also allows
+for user-defined innovations
+in repository structure,
+which is not possible
+when branches and tags
+are first-class features
+like in git.&lt;&#x2F;p&gt;
+&lt;p&gt;To delete a branch,
+you can run:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;svn delete https:&#x2F;&#x2F;example.com&#x2F;svn&#x2F;project&#x2F;branches&#x2F;feature-1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And, you can also resurrect a branch
+by running:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;svn copy \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;    https:&#x2F;&#x2F;example.com&#x2F;svn&#x2F;project&#x2F;branches&#x2F;feature-1@4541 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;    https:&#x2F;&#x2F;example.com&#x2F;svn&#x2F;project&#x2F;branches&#x2F;feature-1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;where 4541 is replaced with the revision number
+of the commit before the item was deleted.&lt;&#x2F;p&gt;
+&lt;p&gt;(Oh right,
+revisions are numbered
+in sequential order.
+This does not cause any issues
+because one server is in control
+of keeping track of the commits.)&lt;&#x2F;p&gt;
+&lt;p&gt;You might find this inelegant,
+and that is a completely fair opinion,
+but I can&#x27;t deny
+the aesthetic appeal
+that this has for me.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;command-structure&quot;&gt;Command Structure&lt;&#x2F;h3&gt;
+&lt;p&gt;Notice how versatile the &lt;code&gt;svn copy&lt;&#x2F;code&gt; command
+has been so far.
+This exemplifies a trend
+that I noticed
+in the way that Subversion
+designs its tools.
+There are generally fewer commands
+that do a variety
+of related tasks
+as opposed to git&#x27;s
+many commands
+which each have one or two applications each.
+Despite this,
+I find the syntax
+of SVN commands
+surprisingly consistent
+and easy to follow.&lt;&#x2F;p&gt;
+&lt;p&gt;I think there is an inherent merit to
+having a small set of versatile tools.
+The underlying operations
+of every use case of &lt;code&gt;svn merge&lt;&#x2F;code&gt;
+is the same,
+even though the command is capable
+of doing vastly different things.&lt;&#x2F;p&gt;
+&lt;p&gt;This is where I would insert a rant
+on the UNIX philosophy
+if I were a better tech blogger.
+But, I don&#x27;t believe I have anything
+productive to add to that conversation
+at the moment.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;closing-thoughts&quot;&gt;Closing Thoughts&lt;&#x2F;h2&gt;
+&lt;p&gt;So, as a git user,
+should you drop everything and switch to Subversion?
+No, obviously not.
+git is the standard in version control,
+for better or for worse.
+Programmers had a choice
+between a somewhat inconvenient system
+in Subversion
+and a much more convenient system
+in git.
+Is it any surprise
+that we chose convenience,
+even if the other option
+encourages better development practices?
+How very human of us.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are starting a new project
+in 2024
+and you choose something
+other than git
+for your version control system,
+you limit your pool of potential contributors.
+That may not be a bad thing.
+If you have a project
+that you plan to work on by yourself
+or with a small team
+and you&#x27;re interested in trying SVN,
+I say, there&#x27;s no harm in it.
+See how you like it!
+Just, don&#x27;t expect many more people
+to flock to you.&lt;&#x2F;p&gt;
+&lt;p&gt;I struggled with titling this article.
+I considered titling it
+&amp;quot;Subversion deserves a second chance&amp;quot;
+but, really, it doesn&#x27;t.
+Distributed VCS
+was developed in response to Subversion,
+which had clear market dominance
+up until its release.
+No, Subversion had its time
+and programmers voted it out.
+I have no reason to believe
+that it needs a second term.&lt;&#x2F;p&gt;
+&lt;p&gt;However, subversion is fascinating
+and does not deserve to be forgotten.
+It is an undeniable piece
+of this industry&#x27;s rich history.
+Additionally,
+from a design standpoint,
+there are some fascinating things
+that we&#x27;ve seemingly just given up
+with the move to git.&lt;&#x2F;p&gt;
+&lt;p&gt;For that reason,
+Subversion does deserve something
+in our modern world.
+Subversion deserves at the very least
+a passing thought
+every once in a while.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

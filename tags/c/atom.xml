@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>CodeTriangle&#x27;s Curiosities - c</title>
+    <link href="https://codetriangle.me/tags/c/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://codetriangle.me"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-02-12T00:00:00+00:00</updated>
+    <id>https://codetriangle.me/tags/c/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Mastermind</title>
+        <published>2024-02-12T00:00:00+00:00</published>
+        <updated>2024-02-12T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://codetriangle.me/projects/2024-02-12-mastermind/" type="text/html"/>
+        <id>https://codetriangle.me/projects/2024-02-12-mastermind/</id>
+        
+        <content type="html">&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;projects&#x2F;microcontroller-success.jpg&quot; alt=&quot;A completed game of Mastermind&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is a page about
+my final project for ECE 3710: Microcontrollers.
+You can find the source code
+on GitHub &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;CodeTriangle&#x2F;ece3710-final&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;This project,
+written by myself and a lab partner,
+implements a digital version
+of the classic 2-player board game
+&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mastermind_(board_game)&quot;&gt;Mastermind&lt;&#x2F;a&gt;
+for an STM32 microcontroller
+in C and assembly.&lt;&#x2F;p&gt;
+&lt;p&gt;It requires:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;an &lt;a href=&quot;https:&#x2F;&#x2F;www.st.com&#x2F;en&#x2F;microcontrollers-microprocessors&#x2F;stm32l476rg.html&quot;&gt;STM32L476RG&lt;&#x2F;a&gt; microcontroller&lt;&#x2F;li&gt;
+&lt;li&gt;a 16x16 pixel WS2812B LED array&lt;&#x2F;li&gt;
+&lt;li&gt;six push buttons
+(as currently written,
+the code assumes they will be
+red, yellow, green, blue, orange, and purple,
+in that order)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This project was a lot of fun to work on
+because of how many topics
+I was able to touch on
+while working on it.
+I created what is essentially
+a very low-level device driver
+and basic graphics API
+for drawing to the LED array.&lt;&#x2F;p&gt;
+&lt;p&gt;The WS2812B chip is actually very well supported
+by various LED libraries,
+notably &lt;a href=&quot;https:&#x2F;&#x2F;fastled.io&#x2F;&quot;&gt;FastLED&lt;&#x2F;a&gt;,
+which every website I went to for help
+suggested I use.
+I would have simply used this
+if the class hadn&#x27;t been focused
+on interfacing with
+a microcontroller&#x27;s memory map directly
+rather than relying on libraries
+such as Arduino
+(which FastLED depends on).&lt;&#x2F;p&gt;
+&lt;p&gt;We considered other options
+for LED arrays,
+such as &lt;a href=&quot;https:&#x2F;&#x2F;www.adafruit.com&#x2F;product&#x2F;607&quot;&gt;this one from Adafruit&lt;&#x2F;a&gt;.
+They helpfully proclaim,&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Of course, we wouldn&#x27;t leave you
+with a datasheet and a &amp;quot;good luck!&amp;quot;
+We have tutorials and add-on boards
+that will make connecting and usage very easy!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Again, since none of these tutorials
+would work with our environment,
+I decided to look at that datasheet
+that they mentioned.
+The datasheet, however,
+includes no mention
+of the protocol
+required to control the thing
+other than that it uses 13 pins.
+In reality, the folks at Adafruit
+left me with no datasheet and a &amp;quot;good luck.&amp;quot;
+I spent only a couple of hours
+searching for information
+before I decided that the WS2812B,
+whose datasheet was obtuse but existent,
+would probably be a better choice.&lt;&#x2F;p&gt;
+&lt;p&gt;Nontrivial effort was required
+to decipher the WS2812B&#x27;s datasheet.
+When I finally did,
+I realized that communicating with the thing
+would be a tall task indeed.&lt;&#x2F;p&gt;
+&lt;p&gt;The WS2812B chip requires
+a 5-volt wire,
+a ground wire,
+and a data-in signal.
+It produces a data-out signal,
+which can be wired to another WS2812B chip.
+In order to not use a clock,
+the WS2812B chip interprets the logic HIGH
+and logic LOW signals
+on the data-in line
+in specific ways
+over specific absolute time intervals
+as zeroes and ones,
+forming a sequence of three eight-bit numbers,
+which are used as the intensity
+of the green, red, and blue LEDs,
+in that order.
+All bits following the initial 24 received
+are sent on to the next light in the chain.&lt;&#x2F;p&gt;
+&lt;p&gt;In particular,
+each bit takes 1.25μs ± 600ns
+to transmit.
+Each bit begins
+at logic HIGH,
+and the amount of time
+the line is held
+at logic HIGH
+determines whether the bit
+is a zero or one.&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;Time High&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: center&quot;&gt;Time Low&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: center&quot;&gt;Bit Sent&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;400ns ± 150ns&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;850ns ± 150ns&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;0&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;800ns ± 150ns&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;450ns ± 150ns&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;1&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;Holding the line at logic LOW for 50μs
+resets the display
+the next time the line is pulled to logic HIGH.&lt;&#x2F;p&gt;
+&lt;p&gt;To figure out just how fast
+I would need to drive this thing,
+I wrote a simple python script
+to calculate the minimum
+and maximum amount
+of clock cycles
+that would comprise
+each of the different windows:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;T0H &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0.40e-6
+&lt;&#x2F;span&gt;&lt;span&gt;T1H &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0.80e-6
+&lt;&#x2F;span&gt;&lt;span&gt;T0L &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0.85e-6
+&lt;&#x2F;span&gt;&lt;span&gt;T1L &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0.45e-6
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;margin &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;150e-9
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;spd &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;4e6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;8e6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;16e6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;24e6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;32e6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;48e6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;64e6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;80e6&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;TIMINGS FOR SPEED=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(spd)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;goal&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;:&amp;gt;8}{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;min&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;:&amp;gt;10}{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;max&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;:&amp;gt;10}{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;minclk&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;:&amp;gt;10}{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;maxclk&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;:&amp;gt;10}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;[T0H, T0L, T1H, T1L]:
+&lt;&#x2F;span&gt;&lt;span&gt;        mini&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;t&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;margin;
+&lt;&#x2F;span&gt;&lt;span&gt;        maxi&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;t&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;+&lt;&#x2F;span&gt;&lt;span&gt;margin;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;{t:8}{mini:10.2}{maxi:10.2}{mini&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;spd:10.2f}{maxi&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;spd:10.2f}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;()
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Turns out, hitting these windows
+on the chip we had
+is no joke.
+At the default clock speed of 4 MHz,
+the maximum time for the shortest interval
+is 2.2 clock cycles,
+which is not remotely possible to hit.&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;Goal (ns)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Min time (ns)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Max time (ns)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Min time (clock cycles)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Max time (clock cycles)&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;400&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;250&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;550&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;1.00&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;2.20&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;850&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;700&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;1000&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;2.80&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;4.00&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;800&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;649&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;950&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;2.60&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;3.80&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;450&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;300&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;600&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;1.20&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;2.40&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;The windows only begin to be slightly forgiving at 32 MHz,
+where the maximum time for the shortest interval
+is 17.6 clock cycles:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;Goal (ns)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Min time (ns)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Max time (ns)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Min time (clock cycles)&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Max time (clock cycles)&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;400&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;250&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;550&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;8.00&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;17.60&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;850&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;700&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;1000&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;22.40&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;32.00&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;800&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;649&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;950&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;20.80&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;30.40&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;450&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;300&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;600&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;9.60&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;19.20&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;I fiddled around for a few hours
+creating a C procedure,
+but the exact length
+of the compiler&#x27;s code
+in clock cycles
+was just too unpredictable.&lt;&#x2F;p&gt;
+&lt;p&gt;So I had to go one step further
+and write an optimized assembly procedure.
+I&#x27;ll spare you the exact details,
+but I was able to hit the timing intervals
+with the 32 MHz clock
+with a few clock cycles to spare, even.
+At a few points,
+I had to insert no-op instructions
+to get to the approximate center
+of the timing window.&lt;&#x2F;p&gt;
+&lt;p&gt;Once I had the code
+communicating with the LEDs,
+it was time to start defining my API.
+The first thing to do
+was set up all the different colors.
+They went through several variations,
+but the final colors are defined as follows:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;BLACK  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;RED    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;YELLOW &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;BLUE   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;3
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;GREEN  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;4
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;PURPLE &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;5
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;ORANGE &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;6
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;WHITE  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;7
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;static &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;uint8_t&lt;&#x2F;span&gt;&lt;span&gt; colors[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;][&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F;            GRN   RED   BLU
+&lt;&#x2F;span&gt;&lt;span&gt;    [BLACK]  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00 &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    [WHITE]  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x10&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x10&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x10 &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    [RED]    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x20&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00 &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    [GREEN]  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x2A&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x03 &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    [BLUE]   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x0A&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x2A &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    [YELLOW] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x25&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x2A&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00 &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    [PURPLE] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x15&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x20 &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    [ORANGE] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x08&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x35&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x00 &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Note that the highest value
+in the entire array
+is &lt;code&gt;0x2A&lt;&#x2F;code&gt;.
+These lights burn &lt;em&gt;bright&lt;&#x2F;em&gt; at full intensity.
+Even at half intensity,
+it can hurt to look at the board too long.
+Only by bumping everything down
+to a sixth of the maximum value
+is it possible to look at these LEDs
+at relatively close range.&lt;&#x2F;p&gt;
+&lt;p&gt;After that,
+it was simply a matter
+of decoding the snaking pattern
+that the data line followed
+to get screen coordinates,
+then writing a function to set a pixel.
+Further drawing functions
+were out of scope of the assignment,
+but drawing lines,
+circles,
+and other objects
+with only the aid of a pixel setting function
+is a well-explored field;
+thus its implementation
+is left as an exercise
+to the reader.
+The &lt;code&gt;set_pixel&lt;&#x2F;code&gt; function
+is included below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;set_pixel&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;uint8_t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;uint8_t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;x&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;uint8_t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;y&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;uint8_t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;color&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;uint8_t&lt;&#x2F;span&gt;&lt;span&gt; yoffset &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; x &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;% &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;15 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt; y) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; y;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;uint8_t&lt;&#x2F;span&gt;&lt;span&gt; xoffset &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;15 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt; x) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;16&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;uint8_t&lt;&#x2F;span&gt;&lt;span&gt; idx &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; xoffset &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;+&lt;&#x2F;span&gt;&lt;span&gt; yoffset;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    image[idx] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; color;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;image&lt;&#x2F;code&gt; is a buffer of 256 eight-bit integers,
+each representing a color in the &lt;code&gt;colors&lt;&#x2F;code&gt; array
+included in the snippet above the last.
+These are turned into
+their corresponding three-byte representations,
+which are sent to the array at the end.&lt;&#x2F;p&gt;
+&lt;p&gt;The rest of the project including
+the button interface,
+the microcontroller initialization,
+and the game logic
+were interesting to implement
+but they were not novel for me
+so I won&#x27;t go over any of it here.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

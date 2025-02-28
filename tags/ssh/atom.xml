@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>CodeTriangle&#x27;s Curiosities - ssh</title>
+    <link href="https://codetriangle.me/tags/ssh/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://codetriangle.me"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-10-06T00:00:00+00:00</updated>
+    <id>https://codetriangle.me/tags/ssh/atom.xml</id>
+    <entry xml:lang="en">
+        <title>The Ultimate SSH Cheatsheet</title>
+        <published>2024-10-06T00:00:00+00:00</published>
+        <updated>2024-10-06T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://codetriangle.me/projects/2024-10-06-ssh-cheatsheet/" type="text/html"/>
+        <id>https://codetriangle.me/projects/2024-10-06-ssh-cheatsheet/</id>
+        
+        <content type="html">&lt;p&gt;Many years ago,
+I gave a presentation
+for the Free Software and Linux Club
+at Utah State University
+teaching people how to use SSH.
+Specifically, I chose to emphasize
+the use of the OpenSSH client.
+I truly believe that SSH
+and, in particular OpenSSH,
+is one of the most powerful tools
+available to you
+as a computer user
+(not just as a Linux user).&lt;&#x2F;p&gt;
+&lt;p&gt;At the time, I had been using SSH
+for several years,
+but I had had a rough start with the tool
+and it took me a good while
+to learn all of its secrets
+and how to use it well.
+I saw the presentation
+as a great opportunity
+to give new users
+the opportunity to learn in just over an hour
+what had taken me many years to figure out.&lt;&#x2F;p&gt;
+&lt;p&gt;I decided to make a little handout
+to go along with the presentation,
+to ease the audience into the concepts
+and to give them as reminders
+in case they forgot the syntax.
+However, I also ended up receiving feedback
+from seasoned users
+who ended up referencing my cheatsheet
+for some of the more obscure features.&lt;&#x2F;p&gt;
+&lt;p&gt;As the years have gone by,
+the presentation has gotten even longer
+as I&#x27;ve learned more about SSH myself.
+This year,
+I decided to redesign my handout
+in Inkscape
+(the previous version was just a LaTeX document).
+I am extremely proud of how it turned out
+so I decided to share it here.
+I hope it is relevant and useful
+for years to come.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;&#x2F;documents&#x2F;ssh-cheatsheet.png&quot;&gt;&lt;img src=&quot;&#x2F;documents&#x2F;ssh-cheatsheet.png&quot; alt=&quot;The SSH Cheatsheet&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A printable PDF version is also available
+with two copies side-by-side
+on a piece of letter paper.
+&lt;a href=&quot;&#x2F;documents&#x2F;ssh-cheatsheet-two.pdf&quot;&gt;You can find it here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I have decided to distribute this
+under Creative Commons 4.0 BY,
+the least restrictive one.
+The cheatsheet&#x27;s source
+and distributions
+are available
+at the following GitHub repo:
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;CodeTriangle&#x2F;ssh-cheatsheet&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;CodeTriangle&#x2F;ssh-cheatsheet&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
