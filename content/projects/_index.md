@@ -1,5 +1,6 @@
 ---
 title: Projects
+generate_feeds: true
 ---
 
 Oh, you want to see some of the things I've made, huh?

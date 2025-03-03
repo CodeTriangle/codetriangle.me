@@ -2,7 +2,7 @@
 
 {% block main %}
 	<main>
-		<h1>{{ section.title}}</h1>
+		<h1>{{ section.title }}</h1>
 		{%- if section.content -%}
 			{{ section.content | safe }}
 			<hr>
@@ -31,6 +31,13 @@
 				</li>
 			{% endfor %}
 		</ul>
+		{%- if section.generate_feeds %}
+			<p>
+				Follow with
+				<a href="./rss.xml">RSS</a> or
+				<a href="./atom.xml">Atom</a>
+			</p>
+		{%- endif %}
 		<small>
 			<div>
 				{% set tags = get_taxonomy(kind="tags") %}
