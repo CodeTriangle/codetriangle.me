@@ -3,34 +3,40 @@ title: CodeTriangle's Blog
 ---
 
 Hey there!
-I'm Richard, or CodeTriangle, or Trungle, or Trongle, or RMS,
+I'm Richard, or CodeTriangle, or Trungle, or Trongle,
+or [RMS](@/blog/2025-01-31.supplanting-rms.md)
 depending on where you know me from.
-Welcome to my blog,
+Welcome to my website,
 my largely unfocused collection
 of thoughts and opinions
 on anything and everything
 that may interest me.
-Check out the [blog](@/blog/_index.md) for some writings
-or the [projects](@/projects/_index.md) page for things I've made
-or you can read the rest of this page
+Use the links in the navbar to get around,
+or read the rest of this page
 to learn a bit more about why this place exists.
 
-While the full contents of this blog
-will only be interesting to me,
-there are reasons other people
-might want to visit.
-The authoratative version
-of some of my opinions
-will be stored here,
-and this blog will allow me
-to link people to them
-quickly and easily.
+Back in February 2024 I acquired the codetriangle.me domain
+for free through GitHub Education.
+Only after that did I started considering
+what kind of stuff I could write
+that would be worthwhile.
+I eventually decided that the content of this site
+should be split into two sections.
 
-I may at some point write
-with some amount of specificity
-about the different categories
-that this blog will cover,
-but that day is not today.
+The [projects](@/projects/_index.md) page
+quickly became a valuable resource
+for showing off my projects
+in a place that was not as space-limited
+as a traditional résumé.
+My [blog](@/blog/_index.md),
+is, for now at least, just a tech blog,
+housing the authoratative versions
+of my various opinions
+which I think are worth sharing.
+
+I can't guarantee that the blog
+will remain focused on tech forever,
+but I do try to have a reason for every post.
 For now, here's a short list
 of things I'm interested in,
 which may or may not be featured
