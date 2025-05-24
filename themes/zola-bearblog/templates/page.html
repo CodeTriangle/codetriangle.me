@@ -15,7 +15,7 @@
       </p>
     {%- endif %}
   {%- endif %}
-  {%- if page.toc %}
+  {%- if not page.extra.notoc %}
     {% if page.toc %}
       <ol id="toc">
       {% for h1 in page.toc %}
