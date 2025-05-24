@@ -33,6 +33,10 @@ is, for now at least, just a tech blog,
 housing the authoratative versions
 of my various opinions
 which I think are worth sharing.
+Also, if such things
+are of interest to you,
+feel free to check out
+my new [game review column](@/reviews/_index.md).
 
 I can't guarantee that the blog
 will remain focused on tech forever,
