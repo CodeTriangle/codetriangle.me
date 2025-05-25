@@ -51,8 +51,13 @@
 		<small>
 			<div>
 				{% set tags = get_taxonomy(kind="tags") %}
-				{% for post in tags.items %}
-					<a href="{{ post.permalink }}">#{{ post.name }}</a>&nbsp;
+				{% for term in tags.items %}
+					{% for page in term.pages -%}
+						{% if page.ancestors | last == section.relative_path -%}
+							<a href="{{ term.permalink }}">#{{ term.name }}</a>&nbsp;
+							{% break %}
+						{%- endif %}
+					{%- endfor %}
 				{% endfor %}
 			</div>
 		</small>
