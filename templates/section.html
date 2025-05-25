@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}{{ section.title }} | {{ super() }}{% endblock %}
+{% block title %}
+	{{ section.title }}
+	{% for a in section.ancestors | reverse -%}
+		{% set s = get_section(path=a) %}
+		| {{ s.title }}
+	{%- endfor %}
+{% endblock %}
 
 {% block main %}
 	<main>

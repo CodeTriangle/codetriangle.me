@@ -1,5 +1,5 @@
 ---
-title: CodeTriangle's Blog
+title: CodeTriangle's Curiosities
 ---
 
 Hey there!
