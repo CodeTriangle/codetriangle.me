@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>CodeTriangle&#x27;s Curiosities - dungon-crawler</title>
+      <link>https://codetriangle.me</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://codetriangle.me/tags/dungon-crawler/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>CrossCode</title>
+          <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://codetriangle.me/reviews/2025-06-30-crosscode/</link>
+          <guid>https://codetriangle.me/reviews/2025-06-30-crosscode/</guid>
+          <description xml:base="https://codetriangle.me/reviews/2025-06-30-crosscode/">&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;368340&#x2F;&quot;&gt;Buy this game on Steam&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;radicalfishgames.itch.io&#x2F;crosscode&quot;&gt;Buy this game on itch.io&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cross-code.com&#x2F;en&#x2F;start&quot;&gt;Try a free demo of this game&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cross-code.com&#x2F;en&#x2F;home&quot;&gt;Visit this game&#x27;s official website&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; (has links to console releases)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.radicalfishgames.com&#x2F;&quot;&gt;Visit the developer&#x27;s official website&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;shirakumon.bandcamp.com&#x2F;album&#x2F;crosscode-original-game-soundtrack&quot;&gt;Buy this game&#x27;s soundtrack on Bandcamp&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;A few years ago,
+before I really started using Steam,
+I had a habit of scrolling for hours
+through games on the Nintendo Switch Eshop
+on the &quot;Great Deals&quot; page,
+sometimes even reaching
+the end of the list.
+It was from this page
+that I was able to harvest
+some of my most niche indie picks.
+Multiple times throughout this process
+I passed over a game called &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+which I would always look over
+but never purchase.
+I was more risk-averse in those days.
+Today, if I see a game with a page
+half as promising as &lt;em&gt;CrossCode&lt;&#x2F;em&gt;&#x27;s
+and it costs just $10,
+I will often just buy it on sight.
+But because I never did,
+that the existence of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+was a fairly constant presence
+somewhere in the back of my mind.
+Then in 2022, itch.io offered
+the &lt;a href=&quot;https:&#x2F;&#x2F;itch.io&#x2F;b&#x2F;1316&#x2F;bundle-for-ukraine&quot;&gt;Bundle for Ukraine&lt;&#x2F;a&gt;,
+and I finally ran out of excuses
+not to play &lt;em&gt;CrossCode&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;title.png&quot; alt=&quot;The title screen of CrossCode&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;So, over the course of about a week,
+mostly during very late nights
+in my college dorm
+in spring of 2022,
+I binged the entire game.
+My opinions on the game
+are most poignantly expressed
+by example.
+After I finished the game,
+I bought it on Steam
+at full price
+just to support the developers,
+along with the DLC.
+I also purchased the game
+four or five times
+to give as Christmas gifts to my friends,
+prompting several of them
+to individually purchase the DLC themselves.&lt;&#x2F;p&gt;
+&lt;p&gt;In other words, it&#x27;s &lt;strong&gt;extremely good&lt;&#x2F;strong&gt;.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is one of my easiest recommendations
+to just about anyone,
+familiar with the genre or not.
+Get ready for me to say this exact thing,
+rephrased in different contexts,
+dozens of times in this review.&lt;&#x2F;p&gt;
+&lt;p&gt;To start off this review,
+I want to make a point to acknowledge
+the most novel aspect of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+the one aspect of the game
+that I have never seen done
+by any other game.
+This is technically a spoiler,
+but you will learn it
+45 minutes into the game
+before even entering the tutorial dungeon.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; employs a unique
+&lt;strong&gt;embedded narrative&lt;&#x2F;strong&gt;.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is set almost entirely
+inside of the fictional MMORPG &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;.
+This has massive consequences
+for basically every aspect of the game.
+Characterization,
+plot points, worldbuilding,
+game mechanics, world design.
+All of these elements
+require multiple levels of analysis:
+one for &lt;em&gt;CrossCode&lt;&#x2F;em&gt; and one for &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;As an example, while playing &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+you experience
+most of the plot of &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;;
+however, the plot of these games
+are not the same, not nearly.
+&lt;em&gt;CrossWorlds&lt;&#x2F;em&gt; has a fairly standard plot
+for an action game,
+with the traditional concessions
+required for the plot to make sense
+in the context of an MMORPG.
+It mostly tries
+to get out of the players&#x27; way,
+introducing the lore of the world
+and providing the environments,
+which allows players to create
+their own personalized adventure
+within the confines of the game world.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt;&#x27;s plot, on the other hand,
+is a much more thematically rich narrative
+about a group of players
+who join up to play &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;
+and form a gripping friendship
+in the process.&lt;&#x2F;p&gt;
+&lt;p&gt;The developers of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+are keenly aware of the gap here,
+with much of the writing
+poking gentle fun at this fact,
+allowing the developers
+to lightheartedly criticize certain RPG tropes
+while sincerely indulging in others
+in a very believable fashion.
+For example, since some characters in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+are real people who exist
+outside of &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;,
+there are a few pretty good jokes
+about the way that they
+(as real people)
+are so much more sophisticated
+than &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;&#x27; NPCs,
+despite all of them
+being NPCs within the context
+of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;npc-players.png&quot; alt=&quot;Multiple &amp;quot;players&amp;quot; interacting in CrossWorlds&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I would say that,
+simply for this aspect of its writing,
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is one of the most fascinating games
+to analyze as a work of art.
+And, because of this choice,
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is able to
+craft a truly unique narrative
+about friendship, forgiveness,
+love, and loss.&lt;&#x2F;p&gt;
+&lt;p&gt;But, I don&#x27;t want to spoil anything.
+To experience this game
+knowing too much about where it goes
+would be nothing less than a tragedy.
+If this last section
+piqued your interest enough,
+you might even consider clicking off here
+and just playing the game yourself.&lt;&#x2F;p&gt;
+&lt;p&gt;But, you might still want to stay
+and learn a bit more
+about the rest of the game.&lt;&#x2F;p&gt;
+&lt;p&gt;Okay, so what kind of game
+is &lt;em&gt;CrossCode&lt;&#x2F;em&gt;, actually?
+Well, it&#x27;s a &lt;strong&gt;16-bit, top-down Action RPG&lt;&#x2F;strong&gt;.
+The stylistic inspirations
+from the &lt;em&gt;Zelda&lt;&#x2F;em&gt; series
+are extremely obvious
+in the best way possible.
+The dungeons and world maps in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+are a true love letter
+to all the best elements
+of design in the &lt;em&gt;Zelda&lt;&#x2F;em&gt; series.
+They serve up all the complexity
+of the sprawling designs
+that characterize the top-down games
+with all the spectacle
+and cinematic appeal
+that give richness to the 3D games.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;sliding-puzzle.png&quot; alt=&quot;A puzzle in CrossCode&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The puzzles in particular
+feel like a fairly sizeable step up
+from many &lt;em&gt;Zelda&lt;&#x2F;em&gt; puzzles.
+The puzzle elements on display in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+especially those in the later dungeons,
+are both more interesting
+and more reactive to stimula
+than those in most &lt;em&gt;Zelda&lt;&#x2F;em&gt; games;
+plus, each dungeon
+has more and harder puzzles
+than the average &lt;em&gt;Zelda&lt;&#x2F;em&gt; dungeon.&lt;&#x2F;p&gt;
+&lt;p&gt;The most notable addition, though,
+has got to be how much more
+of an active role
+the player has to take
+to complete the puzzles.
+In most dungeon crawlers,
+just knowing how to get
+the puzzle elements
+into the right place
+is 90% of the effort.
+In &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+this number lowers to about 50%
+for many puzzles.
+Oftentimes, you are required
+to move the puzzle elements
+into their correct places,
+then initiate the puzzle,
+then make adjustments
+to the puzzle elements on a timer
+while the puzzle is completing.
+I have taken to calling these
+&lt;strong&gt;execution-based puzzles&lt;&#x2F;strong&gt;.
+I absolutely adore them,
+but I have heard mixed reviews
+from a lot of other players.
+There is an assist mode,
+which can turn down the speed
+of these execution-based puzzles,
+but there are some who opine
+that even their inclusion
+hampers their enjoyment of the game.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;CrossCode&lt;&#x2F;em&gt; also differs from &lt;em&gt;Zelda&lt;&#x2F;em&gt;
+in that there are not &lt;em&gt;Zelda&lt;&#x2F;em&gt;-style items
+in the traditional sense.
+In each dungeon,
+you receive an element,
+which acts as a modifier to your weapons.
+These serve a combat purpose
+as well as a puzzle-solving purpose,
+which is neat,
+but because each element
+is used in exactly the same way
+as the other elements,
+some of the enjoyable parts
+of &lt;em&gt;Zelda&lt;&#x2F;em&gt;-style puzzle solving
+where you have to find out
+how each item individually works
+are heavily diminished.
+This is not a dealbreaker,
+not nearly.
+But I do find myself missing it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;level.png&quot; alt=&quot;Lea leveling up&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is not to say
+that &lt;em&gt;CrossCode&lt;&#x2F;em&gt; is
+a &lt;em&gt;Zelda&lt;&#x2F;em&gt; clone
+that just innovates
+on certain &lt;em&gt;Zelda&lt;&#x2F;em&gt;-like aspects
+of its formula.
+To take just one example,
+there are many more
+&lt;strong&gt;traditional RPG elements&lt;&#x2F;strong&gt; present in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+than in any &lt;em&gt;Zelda&lt;&#x2F;em&gt; game.
+&lt;em&gt;CrossWorlds&lt;&#x2F;em&gt; is an MMORPG, after all.
+You gain experience which gives you levels
+that can be used to unlock abilities
+on a skill tree.
+There&#x27;s party management
+and a quest log full of things to do.
+These additions carry the benefits and flaws
+that they have
+in every other game,
+and, admittedly, their integration
+into the gameplay loop
+is not all that inspired.
+However, they serve their purpose.
+Not every game &lt;em&gt;needs&lt;&#x2F;em&gt;
+to innovate on everything
+that makes RPGs unique
+(&lt;a href=&quot;https:&#x2F;&#x2F;codetriangle.me&#x2F;reviews&#x2F;2025-05-24-deathbulge&#x2F;&quot;&gt;though that can be fun&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;circuit.png&quot; alt=&quot;The circuit point skill tree&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Another way that &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+sets itself apart from its inspirations
+is in the combat system,
+which is primarily based in the tradition
+of twin-stick shooters.
+Take aim at enemies from far away
+or slash them at close range.
+Switch between the four different elements,
+which are, of course,
+Heat, Cold, Shock, and Wave.&lt;&#x2F;p&gt;
+&lt;p&gt;The addition of &lt;strong&gt;elemental combat&lt;&#x2F;strong&gt;
+introduces a swath of interesting mechanics
+that serve to make combat extremely dynamic.
+Each element
+has its own skill tree
+containing three levels
+of unlockable special moves.
+Neutral (the lack of any element)
+also has a skill tree
+but with only two levels of moves.
+Also, all of your stats go up
+when switching out of neutral.
+So you&#x27;ll want to spend
+as much time as possible
+in one of the elemental modes.
+However, it is a balancing act
+because attacking in an elemental mode
+builds up an &quot;elemental overload&quot; charge,
+which forces you into neutral
+if it overflows.
+This charge dissipates over time
+so long as you don&#x27;t attack,
+but it discharges faster in neutral mode.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;ice-punch.gif&quot; alt=&quot;An enemy attacking with the Cold element&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Elements come in pairs.
+Heat opposes Cold and Shock opposes Wave
+and vice-versa.
+You&#x27;ll land the most damage
+against a Cold-type enemy
+using Heat-based attacks,
+but you&#x27;ll also receive more damage yourself
+if they manage to hit you.
+If, however, you switch to heat
+during a window
+where the enemy has the advantage,
+you&#x27;ll take much less damage from their attacks.
+Then, when they are more vulnerable,
+you can swap to Cold to deal damage.
+Interactions like this
+are what make &lt;em&gt;CrossCode&lt;&#x2F;em&gt; combat
+so interesting compared to many other games.
+However, I&#x27;ll leave most
+of the intricacies of combat
+for you to discover on your own,
+dear reader.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;heat-attack.gif&quot; alt=&quot;A powerful heat-type attack&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;But before moving on,
+I would like to make one final note
+about the combat system.
+In my first playthrough of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+I never had to intentionally grind
+up to the level required to beat a boss,
+though there are some situations
+where I had to grind
+to get trading materials
+for the sake of a questline.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; has one of the most effective solutions
+to the problem of tedious grinding
+that I have ever seen,
+in the form of &lt;strong&gt;combat ranks&lt;&#x2F;strong&gt;.
+When you begin fighting an enemy,
+you enter combat rank D
+and defeating more enemies increases your rank.
+After all the enemies
+that you have been fighting
+are defeated,
+there is a short timer
+during which you must find
+more enemies to defeat
+lest you lose your combat rank.&lt;&#x2F;p&gt;
+&lt;p&gt;This is undeniably fun
+and it gives you a reason
+to push your luck during combat.
+Some drops don&#x27;t appear
+unless you are higher than a certain rank,
+and your chances of getting high-quality drops
+increases as your rank does,
+potentially shortening grinding times further,
+rewarding skilled play.
+Plus, if you &lt;em&gt;are&lt;&#x2F;em&gt; able to last long enough,
+you achieve the fabled &lt;strong&gt;S Rank&lt;&#x2F;strong&gt;
+and are treated to
+one of the most hype songs
+in the game
+and double drop rates.&lt;&#x2F;p&gt;
+&lt;p&gt;Any discussion of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+is incomplete without a mention
+of its &lt;strong&gt;soundtrack&lt;&#x2F;strong&gt;.
+&lt;a href=&quot;https:&#x2F;&#x2F;shirakumon.com&#x2F;&quot;&gt;Nagi Shirakumo (née Deniz Akbulut)&lt;&#x2F;a&gt;
+should be on your list
+of game composers to watch.
+Every track in this game hits powerfully
+with its accompanying scene
+and the inspirations are as varied
+as the game&#x27;s environments,
+although the jazz fusion-inspired tracks
+have to be my favorite.
+The loud, exciting, synthy battle themes
+are some of the most instantly memorable songs
+in video game history,
+propelling you to keep the combat going
+(if nothing else just so that you can hear
+the incredible S-rank theme).
+Then, when you do fall out of combat,
+you&#x27;re treated to the atmospheric area themes,
+which range from pleasant to intriguing
+to downright oppressive in places.
+The final boss theme is
+a glorious five-minute composition
+featuring repeated time signature changes
+and it is one of
+the most complex pieces of music
+I&#x27;ve listened to in a video game.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, I would not say
+that I am in love with
+the visual style of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;.
+However, I find
+this particular type of 16-bit artstyle,
+pseudo-SNES but souped up,
+not entirely respecting pixel boundaries,
+to be oversaturated.
+In fact, the artstyle largely being nothing new
+is one of the reasons I did not buy this game
+back when I discovered it
+on the Switch eShop.
+Don&#x27;t get me wrong,
+it looks great when in motion,
+oftentimes stunning,
+and the animation work is top-notch.
+I&#x27;d say it is a stellar execution
+of a style that I&#x27;ve already seen
+quite a few times.&lt;&#x2F;p&gt;
+&lt;p&gt;But, on the less nitpicky side,
+the artstyle is also is to blame
+for possibly the biggest issue in the game:
+&lt;strong&gt;depth perception&lt;&#x2F;strong&gt;.
+CrossCode runs in a 3D physics engine,
+but all rendering is done in 2D.
+This can make it difficult to navigate
+the highly vertical maps,
+which can consist of up to three layers.
+It is common that two cliffs
+appear to be at the same height
+on a cursory glance,
+but are actually
+an entire level apart from each other.
+And the game does expect you
+to make these jumps between cliffs.
+Fortunately,
+most sections where this is an issue
+are entirely optional,
+only leading to chests that contain consumables
+or trading items,
+but I can imagine this being
+especially onerous for a completionist type.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;jump.png&quot; alt=&quot;One of the more self-explanitory screens&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is &lt;strong&gt;well worth&lt;&#x2F;strong&gt; the $20 price tag,
+but it does go on sale pretty frequently
+(basically at every major Steam sale).
+At any discounted price,
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is an honest &lt;strong&gt;no-brainer&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;But there&#x27;s also one major
+paid content expansion:
+the &lt;em&gt;A New Home&lt;&#x2F;em&gt; DLC,
+which functions as a short sequel story,
+providing some much-appreciated closure
+on a lot of the elements of the main game
+that may not have gotten
+the sendoff that they deserved.
+This DLC, however, is a bit of a mixed bag
+among even fans of the game.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;kulero.png&quot; alt=&quot;The Ku&amp;#39;lero Temple&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The DLC dungeon
+and the boss fight at the end
+are unambiguously the best
+by a fair margin.
+It simply blows everything else
+out of the water.
+I have a hard time imagining a world
+where almost any other game developer
+makes anything even approaching
+the multiple-hour behemoth
+of puzzle solving and combat encounters
+capped off with an incredibly tough
+but rewarding boss fight
+that is Ku&#x27;lero Temple.
+The musical themes for the DLC area,
+dungeon, and boss
+are not by Deniz Akbulut,
+but they are also top-tier songs,
+and a good reason
+why &lt;a href=&quot;https:&#x2F;&#x2F;steelplus.xyz&#x2F;&quot;&gt;はがね&#x2F;Steel Plus&lt;&#x2F;a&gt;
+should also be on
+your list of game composers to watch.&lt;&#x2F;p&gt;
+&lt;p&gt;The enemies in the DLC
+are mostly reskins of old enemies,
+with only a few exceptions,
+and the new overworld area
+is somewhat small in comparison
+to the others.
+Some players did not like
+the &lt;em&gt;actual, final conclusion&lt;&#x2F;em&gt; of the game,
+which occurs in the final chapter
+after the DLC dungeon is completed.
+I thought the boss fight in this area
+was middling,
+but I liked the story developments
+that it enabled,
+and I thought it provided
+a compelling explanation
+for one element
+that I wanted answers on.&lt;&#x2F;p&gt;
+&lt;p&gt;The DLC is perhaps &lt;strong&gt;a bit steep&lt;&#x2F;strong&gt;
+at its standard retail price of $7,
+depending on how much you enjoyed the base game,
+but it also goes on sale quite often
+and it, too, becomes &lt;strong&gt;well worth it&lt;&#x2F;strong&gt;
+at its discounted price point.&lt;&#x2F;p&gt;
+&lt;p&gt;But this is not the end of the review.
+Radical Fish Games
+is currently working on
+their second ARPG,
+similar to &lt;em&gt;CrossCode&lt;&#x2F;em&gt; in many ways
+but also excitingly unique and fresh,
+in the form of &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.alabaster-dawn.com&#x2F;&quot;&gt;&lt;em&gt;Alabaster Dawn&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;
+and it is currently
+one of my &lt;strong&gt;most anticipated games of all time&lt;&#x2F;strong&gt;.
+It seems to fix basically everything
+that I found myself frustrated by
+in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;.
+Its hybrid 3D artstyle
+should render
+depth-perception issues
+a thing of the past.
+Deep elemental combat returns
+but with varied weapons
+which have already proven
+to have unique functions
+in puzzle solving.
+And the developers have promised
+that the puzzle solving
+will pull back on some
+of the more controversial decisions
+that made them divisive
+without sacrificing any complexity.
+Pull up a chair
+and read the &lt;a href=&quot;https:&#x2F;&#x2F;www.radicalfishgames.com&#x2F;?cat=17&quot;&gt;development blog posts&lt;&#x2F;a&gt;.
+I hope you find them
+just as exciting as I do.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;combat.png&quot; alt=&quot;A preview of Alabaster Dawn&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;CrossCode&lt;&#x2F;em&gt; might never be recognized
+alongside &lt;em&gt;Hollow Knight&lt;&#x2F;em&gt; or &lt;em&gt;Celeste&lt;&#x2F;em&gt;
+as a big dog of indie gaming
+like I think it should,
+but if we get enough attention
+on &lt;em&gt;Alabaster Dawn&lt;&#x2F;em&gt;,
+it just might have a shot.
+So there&#x27;s your call to action.
+Buy &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+and wishlist &lt;em&gt;Alabaster Dawn&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
