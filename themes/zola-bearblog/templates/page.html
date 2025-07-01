@@ -2,8 +2,8 @@
 
 {% block title %}
 	{{ page.title }}
-	{% for a in page.ancestors | reverse -%}
-		{% set s = get_section(path=a) %}
+	{%- for a in page.ancestors | reverse -%}
+		{%- set s = get_section(path=a) %}
 		| {{ s.title }}
 	{%- endfor %}
 {% endblock %}
