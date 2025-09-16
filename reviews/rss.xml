@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>CodeTriangle&#x27;s Curiosities - Game Reviews</title>
+      <link>https://codetriangle.me/reviews/</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://codetriangle.me/reviews/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>CrossCode</title>
+          <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://codetriangle.me/reviews/2025-06-30-crosscode/</link>
+          <guid>https://codetriangle.me/reviews/2025-06-30-crosscode/</guid>
+          <description xml:base="https://codetriangle.me/reviews/2025-06-30-crosscode/">&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;368340&#x2F;&quot;&gt;Buy this game on Steam&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;radicalfishgames.itch.io&#x2F;crosscode&quot;&gt;Buy this game on itch.io&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cross-code.com&#x2F;en&#x2F;start&quot;&gt;Try a free demo of this game&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cross-code.com&#x2F;en&#x2F;home&quot;&gt;Visit this game&#x27;s official website&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; (has links to console releases)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.radicalfishgames.com&#x2F;&quot;&gt;Visit the developer&#x27;s official website&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;shirakumon.bandcamp.com&#x2F;album&#x2F;crosscode-original-game-soundtrack&quot;&gt;Buy this game&#x27;s soundtrack on Bandcamp&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;A few years ago,
+before I really started using Steam,
+I had a habit of scrolling for hours
+through games on the Nintendo Switch Eshop
+on the &quot;Great Deals&quot; page,
+sometimes even reaching
+the end of the list.
+It was from this page
+that I was able to harvest
+some of my most niche indie picks.
+Multiple times throughout this process
+I passed over a game called &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+which I would always look over
+but never purchase.
+I was more risk-averse in those days.
+Today, if I see a game with a page
+half as promising as &lt;em&gt;CrossCode&lt;&#x2F;em&gt;&#x27;s
+and it costs just $10,
+I will often just buy it on sight.
+But because I never did,
+that the existence of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+was a fairly constant presence
+somewhere in the back of my mind.
+Then in 2022, itch.io offered
+the &lt;a href=&quot;https:&#x2F;&#x2F;itch.io&#x2F;b&#x2F;1316&#x2F;bundle-for-ukraine&quot;&gt;Bundle for Ukraine&lt;&#x2F;a&gt;,
+and I finally ran out of excuses
+not to play &lt;em&gt;CrossCode&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;title.png&quot; alt=&quot;The title screen of CrossCode&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;So, over the course of about a week,
+mostly during very late nights
+in my college dorm
+in spring of 2022,
+I binged the entire game.
+My opinions on the game
+are most poignantly expressed
+by example.
+After I finished the game,
+I bought it on Steam
+at full price
+just to support the developers,
+along with the DLC.
+I also purchased the game
+four or five times
+to give as Christmas gifts to my friends,
+prompting several of them
+to individually purchase the DLC themselves.&lt;&#x2F;p&gt;
+&lt;p&gt;In other words, it&#x27;s &lt;strong&gt;extremely good&lt;&#x2F;strong&gt;.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is one of my easiest recommendations
+to just about anyone,
+familiar with the genre or not.
+Get ready for me to say this exact thing,
+rephrased in different contexts,
+dozens of times in this review.&lt;&#x2F;p&gt;
+&lt;p&gt;To start off this review,
+I want to make a point to acknowledge
+the most novel aspect of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+the one aspect of the game
+that I have never seen done
+by any other game.
+This is technically a spoiler,
+but you will learn it
+45 minutes into the game
+before even entering the tutorial dungeon.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; employs a unique
+&lt;strong&gt;embedded narrative&lt;&#x2F;strong&gt;.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is set almost entirely
+inside of the fictional MMORPG &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;.
+This has massive consequences
+for basically every aspect of the game.
+Characterization,
+plot points, worldbuilding,
+game mechanics, world design.
+All of these elements
+require multiple levels of analysis:
+one for &lt;em&gt;CrossCode&lt;&#x2F;em&gt; and one for &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;As an example, while playing &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+you experience
+most of the plot of &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;;
+however, the plot of these games
+are not the same, not nearly.
+&lt;em&gt;CrossWorlds&lt;&#x2F;em&gt; has a fairly standard plot
+for an action game,
+with the traditional concessions
+required for the plot to make sense
+in the context of an MMORPG.
+It mostly tries
+to get out of the players&#x27; way,
+introducing the lore of the world
+and providing the environments,
+which allows players to create
+their own personalized adventure
+within the confines of the game world.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt;&#x27;s plot, on the other hand,
+is a much more thematically rich narrative
+about a group of players
+who join up to play &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;
+and form a gripping friendship
+in the process.&lt;&#x2F;p&gt;
+&lt;p&gt;The developers of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+are keenly aware of the gap here,
+with much of the writing
+poking gentle fun at this fact,
+allowing the developers
+to lightheartedly criticize certain RPG tropes
+while sincerely indulging in others
+in a very believable fashion.
+For example, since some characters in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+are real people who exist
+outside of &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;,
+there are a few pretty good jokes
+about the way that they
+(as real people)
+are so much more sophisticated
+than &lt;em&gt;CrossWorlds&lt;&#x2F;em&gt;&#x27; NPCs,
+despite all of them
+being NPCs within the context
+of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;npc-players.png&quot; alt=&quot;Multiple &amp;quot;players&amp;quot; interacting in CrossWorlds&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I would say that,
+simply for this aspect of its writing,
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is one of the most fascinating games
+to analyze as a work of art.
+And, because of this choice,
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is able to
+craft a truly unique narrative
+about friendship, forgiveness,
+love, and loss.&lt;&#x2F;p&gt;
+&lt;p&gt;But, I don&#x27;t want to spoil anything.
+To experience this game
+knowing too much about where it goes
+would be nothing less than a tragedy.
+If this last section
+piqued your interest enough,
+you might even consider clicking off here
+and just playing the game yourself.&lt;&#x2F;p&gt;
+&lt;p&gt;But, you might still want to stay
+and learn a bit more
+about the rest of the game.&lt;&#x2F;p&gt;
+&lt;p&gt;Okay, so what kind of game
+is &lt;em&gt;CrossCode&lt;&#x2F;em&gt;, actually?
+Well, it&#x27;s a &lt;strong&gt;16-bit, top-down Action RPG&lt;&#x2F;strong&gt;.
+The stylistic inspirations
+from the &lt;em&gt;Zelda&lt;&#x2F;em&gt; series
+are extremely obvious
+in the best way possible.
+The dungeons and world maps in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+are a true love letter
+to all the best elements
+of design in the &lt;em&gt;Zelda&lt;&#x2F;em&gt; series.
+They serve up all the complexity
+of the sprawling designs
+that characterize the top-down games
+with all the spectacle
+and cinematic appeal
+that give richness to the 3D games.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;sliding-puzzle.png&quot; alt=&quot;A puzzle in CrossCode&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The puzzles in particular
+feel like a fairly sizeable step up
+from many &lt;em&gt;Zelda&lt;&#x2F;em&gt; puzzles.
+The puzzle elements on display in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+especially those in the later dungeons,
+are both more interesting
+and more reactive to stimula
+than those in most &lt;em&gt;Zelda&lt;&#x2F;em&gt; games;
+plus, each dungeon
+has more and harder puzzles
+than the average &lt;em&gt;Zelda&lt;&#x2F;em&gt; dungeon.&lt;&#x2F;p&gt;
+&lt;p&gt;The most notable addition, though,
+has got to be how much more
+of an active role
+the player has to take
+to complete the puzzles.
+In most dungeon crawlers,
+just knowing how to get
+the puzzle elements
+into the right place
+is 90% of the effort.
+In &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+this number lowers to about 50%
+for many puzzles.
+Oftentimes, you are required
+to move the puzzle elements
+into their correct places,
+then initiate the puzzle,
+then make adjustments
+to the puzzle elements on a timer
+while the puzzle is completing.
+I have taken to calling these
+&lt;strong&gt;execution-based puzzles&lt;&#x2F;strong&gt;.
+I absolutely adore them,
+but I have heard mixed reviews
+from a lot of other players.
+There is an assist mode,
+which can turn down the speed
+of these execution-based puzzles,
+but there are some who opine
+that even their inclusion
+hampers their enjoyment of the game.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;CrossCode&lt;&#x2F;em&gt; also differs from &lt;em&gt;Zelda&lt;&#x2F;em&gt;
+in that there are not &lt;em&gt;Zelda&lt;&#x2F;em&gt;-style items
+in the traditional sense.
+In each dungeon,
+you receive an element,
+which acts as a modifier to your weapons.
+These serve a combat purpose
+as well as a puzzle-solving purpose,
+which is neat,
+but because each element
+is used in exactly the same way
+as the other elements,
+some of the enjoyable parts
+of &lt;em&gt;Zelda&lt;&#x2F;em&gt;-style puzzle solving
+where you have to find out
+how each item individually works
+are heavily diminished.
+This is not a dealbreaker,
+not nearly.
+But I do find myself missing it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;level.png&quot; alt=&quot;Lea leveling up&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is not to say
+that &lt;em&gt;CrossCode&lt;&#x2F;em&gt; is
+a &lt;em&gt;Zelda&lt;&#x2F;em&gt; clone
+that just innovates
+on certain &lt;em&gt;Zelda&lt;&#x2F;em&gt;-like aspects
+of its formula.
+To take just one example,
+there are many more
+&lt;strong&gt;traditional RPG elements&lt;&#x2F;strong&gt; present in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+than in any &lt;em&gt;Zelda&lt;&#x2F;em&gt; game.
+&lt;em&gt;CrossWorlds&lt;&#x2F;em&gt; is an MMORPG, after all.
+You gain experience which gives you levels
+that can be used to unlock abilities
+on a skill tree.
+There&#x27;s party management
+and a quest log full of things to do.
+These additions carry the benefits and flaws
+that they have
+in every other game,
+and, admittedly, their integration
+into the gameplay loop
+is not all that inspired.
+However, they serve their purpose.
+Not every game &lt;em&gt;needs&lt;&#x2F;em&gt;
+to innovate on everything
+that makes RPGs unique
+(&lt;a href=&quot;https:&#x2F;&#x2F;codetriangle.me&#x2F;reviews&#x2F;2025-05-24-deathbulge&#x2F;&quot;&gt;though that can be fun&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;circuit.png&quot; alt=&quot;The circuit point skill tree&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Another way that &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+sets itself apart from its inspirations
+is in the combat system,
+which is primarily based in the tradition
+of twin-stick shooters.
+Take aim at enemies from far away
+or slash them at close range.
+Switch between the four different elements,
+which are, of course,
+Heat, Cold, Shock, and Wave.&lt;&#x2F;p&gt;
+&lt;p&gt;The addition of &lt;strong&gt;elemental combat&lt;&#x2F;strong&gt;
+introduces a swath of interesting mechanics
+that serve to make combat extremely dynamic.
+Each element
+has its own skill tree
+containing three levels
+of unlockable special moves.
+Neutral (the lack of any element)
+also has a skill tree
+but with only two levels of moves.
+Also, all of your stats go up
+when switching out of neutral.
+So you&#x27;ll want to spend
+as much time as possible
+in one of the elemental modes.
+However, it is a balancing act
+because attacking in an elemental mode
+builds up an &quot;elemental overload&quot; charge,
+which forces you into neutral
+if it overflows.
+This charge dissipates over time
+so long as you don&#x27;t attack,
+but it discharges faster in neutral mode.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;ice-punch.gif&quot; alt=&quot;An enemy attacking with the Cold element&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Elements come in pairs.
+Heat opposes Cold and Shock opposes Wave
+and vice-versa.
+You&#x27;ll land the most damage
+against a Cold-type enemy
+using Heat-based attacks,
+but you&#x27;ll also receive more damage yourself
+if they manage to hit you.
+If, however, you switch to heat
+during a window
+where the enemy has the advantage,
+you&#x27;ll take much less damage from their attacks.
+Then, when they are more vulnerable,
+you can swap to Cold to deal damage.
+Interactions like this
+are what make &lt;em&gt;CrossCode&lt;&#x2F;em&gt; combat
+so interesting compared to many other games.
+However, I&#x27;ll leave most
+of the intricacies of combat
+for you to discover on your own,
+dear reader.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;heat-attack.gif&quot; alt=&quot;A powerful heat-type attack&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;But before moving on,
+I would like to make one final note
+about the combat system.
+In my first playthrough of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;,
+I never had to intentionally grind
+up to the level required to beat a boss,
+though there are some situations
+where I had to grind
+to get trading materials
+for the sake of a questline.
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; has one of the most effective solutions
+to the problem of tedious grinding
+that I have ever seen,
+in the form of &lt;strong&gt;combat ranks&lt;&#x2F;strong&gt;.
+When you begin fighting an enemy,
+you enter combat rank D
+and defeating more enemies increases your rank.
+After all the enemies
+that you have been fighting
+are defeated,
+there is a short timer
+during which you must find
+more enemies to defeat
+lest you lose your combat rank.&lt;&#x2F;p&gt;
+&lt;p&gt;This is undeniably fun
+and it gives you a reason
+to push your luck during combat.
+Some drops don&#x27;t appear
+unless you are higher than a certain rank,
+and your chances of getting high-quality drops
+increases as your rank does,
+potentially shortening grinding times further,
+rewarding skilled play.
+Plus, if you &lt;em&gt;are&lt;&#x2F;em&gt; able to last long enough,
+you achieve the fabled &lt;strong&gt;S Rank&lt;&#x2F;strong&gt;
+and are treated to
+one of the most hype songs
+in the game
+and double drop rates.&lt;&#x2F;p&gt;
+&lt;p&gt;Any discussion of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+is incomplete without a mention
+of its &lt;strong&gt;soundtrack&lt;&#x2F;strong&gt;.
+&lt;a href=&quot;https:&#x2F;&#x2F;shirakumon.com&#x2F;&quot;&gt;Nagi Shirakumo (née Deniz Akbulut)&lt;&#x2F;a&gt;
+should be on your list
+of game composers to watch.
+Every track in this game hits powerfully
+with its accompanying scene
+and the inspirations are as varied
+as the game&#x27;s environments,
+although the jazz fusion-inspired tracks
+have to be my favorite.
+The loud, exciting, synthy battle themes
+are some of the most instantly memorable songs
+in video game history,
+propelling you to keep the combat going
+(if nothing else just so that you can hear
+the incredible S-rank theme).
+Then, when you do fall out of combat,
+you&#x27;re treated to the atmospheric area themes,
+which range from pleasant to intriguing
+to downright oppressive in places.
+The final boss theme is
+a glorious five-minute composition
+featuring repeated time signature changes
+and it is one of
+the most complex pieces of music
+I&#x27;ve listened to in a video game.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, I would not say
+that I am in love with
+the visual style of &lt;em&gt;CrossCode&lt;&#x2F;em&gt;.
+However, I find
+this particular type of 16-bit artstyle,
+pseudo-SNES but souped up,
+not entirely respecting pixel boundaries,
+to be oversaturated.
+In fact, the artstyle largely being nothing new
+is one of the reasons I did not buy this game
+back when I discovered it
+on the Switch eShop.
+Don&#x27;t get me wrong,
+it looks great when in motion,
+oftentimes stunning,
+and the animation work is top-notch.
+I&#x27;d say it is a stellar execution
+of a style that I&#x27;ve already seen
+quite a few times.&lt;&#x2F;p&gt;
+&lt;p&gt;But, on the less nitpicky side,
+the artstyle is also is to blame
+for possibly the biggest issue in the game:
+&lt;strong&gt;depth perception&lt;&#x2F;strong&gt;.
+CrossCode runs in a 3D physics engine,
+but all rendering is done in 2D.
+This can make it difficult to navigate
+the highly vertical maps,
+which can consist of up to three layers.
+It is common that two cliffs
+appear to be at the same height
+on a cursory glance,
+but are actually
+an entire level apart from each other.
+And the game does expect you
+to make these jumps between cliffs.
+Fortunately,
+most sections where this is an issue
+are entirely optional,
+only leading to chests that contain consumables
+or trading items,
+but I can imagine this being
+especially onerous for a completionist type.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;jump.png&quot; alt=&quot;One of the more self-explanitory screens&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is &lt;strong&gt;well worth&lt;&#x2F;strong&gt; the $20 price tag,
+but it does go on sale pretty frequently
+(basically at every major Steam sale).
+At any discounted price,
+&lt;em&gt;CrossCode&lt;&#x2F;em&gt; is an honest &lt;strong&gt;no-brainer&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;But there&#x27;s also one major
+paid content expansion:
+the &lt;em&gt;A New Home&lt;&#x2F;em&gt; DLC,
+which functions as a short sequel story,
+providing some much-appreciated closure
+on a lot of the elements of the main game
+that may not have gotten
+the sendoff that they deserved.
+This DLC, however, is a bit of a mixed bag
+among even fans of the game.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;kulero.png&quot; alt=&quot;The Ku&amp;#39;lero Temple&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The DLC dungeon
+and the boss fight at the end
+are unambiguously the best
+by a fair margin.
+It simply blows everything else
+out of the water.
+I have a hard time imagining a world
+where almost any other game developer
+makes anything even approaching
+the multiple-hour behemoth
+of puzzle solving and combat encounters
+capped off with an incredibly tough
+but rewarding boss fight
+that is Ku&#x27;lero Temple.
+The musical themes for the DLC area,
+dungeon, and boss
+are not by Deniz Akbulut,
+but they are also top-tier songs,
+and a good reason
+why &lt;a href=&quot;https:&#x2F;&#x2F;steelplus.xyz&#x2F;&quot;&gt;はがね&#x2F;Steel Plus&lt;&#x2F;a&gt;
+should also be on
+your list of game composers to watch.&lt;&#x2F;p&gt;
+&lt;p&gt;The enemies in the DLC
+are mostly reskins of old enemies,
+with only a few exceptions,
+and the new overworld area
+is somewhat small in comparison
+to the others.
+Some players did not like
+the &lt;em&gt;actual, final conclusion&lt;&#x2F;em&gt; of the game,
+which occurs in the final chapter
+after the DLC dungeon is completed.
+I thought the boss fight in this area
+was middling,
+but I liked the story developments
+that it enabled,
+and I thought it provided
+a compelling explanation
+for one element
+that I wanted answers on.&lt;&#x2F;p&gt;
+&lt;p&gt;The DLC is perhaps &lt;strong&gt;a bit steep&lt;&#x2F;strong&gt;
+at its standard retail price of $7,
+depending on how much you enjoyed the base game,
+but it also goes on sale quite often
+and it, too, becomes &lt;strong&gt;well worth it&lt;&#x2F;strong&gt;
+at its discounted price point.&lt;&#x2F;p&gt;
+&lt;p&gt;But this is not the end of the review.
+Radical Fish Games
+is currently working on
+their second ARPG,
+similar to &lt;em&gt;CrossCode&lt;&#x2F;em&gt; in many ways
+but also excitingly unique and fresh,
+in the form of &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.alabaster-dawn.com&#x2F;&quot;&gt;&lt;em&gt;Alabaster Dawn&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;
+and it is currently
+one of my &lt;strong&gt;most anticipated games of all time&lt;&#x2F;strong&gt;.
+It seems to fix basically everything
+that I found myself frustrated by
+in &lt;em&gt;CrossCode&lt;&#x2F;em&gt;.
+Its hybrid 3D artstyle
+should render
+depth-perception issues
+a thing of the past.
+Deep elemental combat returns
+but with varied weapons
+which have already proven
+to have unique functions
+in puzzle solving.
+And the developers have promised
+that the puzzle solving
+will pull back on some
+of the more controversial decisions
+that made them divisive
+without sacrificing any complexity.
+Pull up a chair
+and read the &lt;a href=&quot;https:&#x2F;&#x2F;www.radicalfishgames.com&#x2F;?cat=17&quot;&gt;development blog posts&lt;&#x2F;a&gt;.
+I hope you find them
+just as exciting as I do.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;crosscode&#x2F;combat.png&quot; alt=&quot;A preview of Alabaster Dawn&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;CrossCode&lt;&#x2F;em&gt; might never be recognized
+alongside &lt;em&gt;Hollow Knight&lt;&#x2F;em&gt; or &lt;em&gt;Celeste&lt;&#x2F;em&gt;
+as a big dog of indie gaming
+like I think it should,
+but if we get enough attention
+on &lt;em&gt;Alabaster Dawn&lt;&#x2F;em&gt;,
+it just might have a shot.
+So there&#x27;s your call to action.
+Buy &lt;em&gt;CrossCode&lt;&#x2F;em&gt;
+and wishlist &lt;em&gt;Alabaster Dawn&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Deathbulge: Battle of the Bands</title>
+          <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://codetriangle.me/reviews/2025-05-24-deathbulge/</link>
+          <guid>https://codetriangle.me/reviews/2025-05-24-deathbulge/</guid>
+          <description xml:base="https://codetriangle.me/reviews/2025-05-24-deathbulge/">&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;1083790&#x2F;Deathbulge_Battle_of_the_Bands&#x2F;&quot;&gt;Buy this game on Steam&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;deathbulge.itch.io&#x2F;botb&quot;&gt;Buy this game on itch.io&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.deathbulge.com&#x2F;game&quot;&gt;Visit this game&#x27;s official website&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;deathbulge.bandcamp.com&#x2F;album&#x2F;deathbulge-battle-of-the-bands-ost&quot;&gt;Buy the game&#x27;s soundtrack on Bandcamp&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I found this game on a whim one day.
+It looked interesting enough
+and the pitch really grabbed my attention
+so I put it on my wishlist.
+About a year later,
+I finally bought the game while it was on sale.
+I went in with no clear idea of what to expect.
+What I found was &lt;strong&gt;nothing less than a masterpiece&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Deathbulge: Battle of the Bands&lt;&#x2F;em&gt;
+is a quirky turn-based JRPG
+with a cartoony hand-drawn artstyle
+and a unique sense of humor
+where you control a cursed
+three-piece rock band
+who have the ability
+to engage in musical battles
+where they deal damage with their music.
+And it rocks.&lt;&#x2F;p&gt;
+&lt;p&gt;Of all the game genres out there,
+it seems that the JRPG
+is the subject of some of the most experimentation.
+I think that in large part,
+that&#x27;s because the traditional turn-based JRPG
+just has &lt;em&gt;a lot&lt;&#x2F;em&gt; of flaws.
+People still make and play JRPGs,
+but very few of them still have
+all of the annoying elements
+associated with the early days
+of the genre.
+Some measure of defiance, therefore,
+is the norm
+when creating in this space.
+I also believe that,
+due to the nature of the mechanics at play,
+there are &lt;em&gt;so many&lt;&#x2F;em&gt; ways
+to put your own personal spin
+on the JRPG formula;
+in this way, it is
+a uniquely spinnable space
+to create in.
+Think of how &lt;em&gt;Earthbound&lt;&#x2F;em&gt; sets itself apart
+from its contemporaries mechanically
+versus how &lt;em&gt;Undertale&lt;&#x2F;em&gt; does
+or how &lt;em&gt;Paper Mario&lt;&#x2F;em&gt; does.
+I think what sets &lt;em&gt;Deathbulge: Battle of the Bands&lt;&#x2F;em&gt;
+apart from its contemporaries
+is that its creators came up with
+ways to &lt;strong&gt;break RPG conventions
+that no one else even thought of breaking&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;To introduce this concept,
+I&#x27;d like to start by discussing the battle system.
+&lt;em&gt;Deathbulge&lt;&#x2F;em&gt; has a &lt;strong&gt;turn-based battle system&lt;&#x2F;strong&gt;
+with a strong &lt;strong&gt;active time element&lt;&#x2F;strong&gt;
+(think &lt;em&gt;Chrono Trigger&lt;&#x2F;em&gt;).
+Your fronted character
+moves across a bar
+and when they reach the end,
+they can perform a move.
+The uniqueness comes from the fact
+that the bar is subdivided into four &quot;measures,&quot;
+each of which can hold some kind of effect
+that is applied to the fronted player
+while the marker is in that measure.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;dbbotb&#x2F;screenshot-1.png&quot; alt=&quot;Measure effects in Deathbulge: Battle of the Bands&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This bar replaces many elements
+of the traditional turn-based battle system
+including status effects, summons, and more
+(which I will not spoil
+because I think it is best
+to experience what else the bar does
+on your own).
+In the image above,
+the flaming skull effect
+is called &lt;strong&gt;PAIN&lt;&#x2F;strong&gt;
+and is a stand-in
+for burn, poison,
+and any other automatic
+life-loss status effect.
+You can also see &lt;strong&gt;HASTE&lt;&#x2F;strong&gt;,
+which speeds your marker up
+as it passes through those measures
+and &lt;strong&gt;MAD PAIN&lt;&#x2F;strong&gt;
+which is an upgraded form of Pain.
+The purple one on the far right of the image
+will remain a mystery.&lt;&#x2F;p&gt;
+&lt;p&gt;This mechanic is &lt;strong&gt;so cool&lt;&#x2F;strong&gt;!
+I&#x27;ve never truly engaged
+with status effects that deeply before.
+I think it&#x27;s because,
+although I do understand that they&#x27;re there,
+it&#x27;s hard to visualize what tangible benefit
+it gives me to inflict status effects on enemies,
+especially the more complex ones.
+This game really hit for me
+because finally I have a way
+to understand &lt;em&gt;what&lt;&#x2F;em&gt; effects do
+and exactly how helpful they are.
+It adds an additional strategic element.
+Fundamentally, it is
+a kind of &lt;strong&gt;open-ended puzzle&lt;&#x2F;strong&gt;
+that you play alongside
+the main combat system.
+It additionally adds some more dynamicity
+since things are happening all the time,
+including between turns.&lt;&#x2F;p&gt;
+&lt;p&gt;The litle carat in the image
+indicates where the next effects
+will be applied.
+In this case,
+if the player were to make a move
+that applied two measures of an effect
+to their own bar,
+it would override the Haste,
+not the Pain,
+which would obviously be preferable.
+After looking at some others&#x27; reviews,
+I noticed some people say
+that it&#x27;s frustrating
+that you can&#x27;t choose
+which measures to apply effects to.
+I couldn&#x27;t agree less!
+Maneuvering around the temperamental bar
+trying to override negative measure effects
+and retain positive ones
+is integral to the puzzle.
+The most I would ask for
+that I don&#x27;t believe the game provisions
+is a beat or move
+that allows you to skip measures,
+applying no effect to them,
+but even that is not necessary
+as there are ways later on in the game
+that can provide a comparable effect
+that provides more utility anyway.&lt;&#x2F;p&gt;
+&lt;p&gt;The moment I realized
+that I was truly in for something else entirely
+was when I got a tutorial
+on how to use items.
+That&#x27;s right, one element
+where Deathbulge innovates
+where I can&#x27;t think of any other game
+that does so
+is in its &lt;strong&gt;item system&lt;&#x2F;strong&gt;.
+I&#x27;d never thought of JRPG items
+as something to be fixed.
+In fact, I noticed while writing this paragraph
+that the phrase &quot;item system&quot;
+doesn&#x27;t even sound like something that&#x27;s real
+because no one in the history of gaming
+has ever said anything like
+&quot;that game has a really interesting item system.&quot;
+Yet this dev team once again proved
+that I am stupid for &lt;em&gt;not&lt;&#x2F;em&gt; talking
+about item systems in games.&lt;&#x2F;p&gt;
+&lt;p&gt;In &lt;em&gt;Deathbulge&lt;&#x2F;em&gt;, you have a limited quantity of &quot;stock&quot;
+which can be redeemed in various quantities for &quot;merch,&quot;
+which provide different item effects.
+For instance, a low-potency restorative item costs 1 stock,
+while a higher-potency restorative item costs 2,
+and a group-healing item costs 3.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;dbbotb&#x2F;merch.png&quot; alt=&quot;An early-game merch menu in Deathbulge: Battle of the Bands&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This system innovates in a few interesting ways,
+adding onto what is usually a pretty rote system
+in most other games that have consumable items,
+not even just JRPGs.
+First, it adds &lt;strong&gt;versatility&lt;&#x2F;strong&gt;:
+once you have a certain piece of merch unlocked,
+you can use it in any battle,
+so long as you are willing to pay its stock cost.
+It also adds &lt;strong&gt;balancing&lt;&#x2F;strong&gt;:
+there is an issue that occurs in many other RPGs
+where lesser healing items lose all relevance
+once you reach the endgame
+and have enough money that
+you can just purchase a full inventory
+of better-quality items.
+No, every item use is an intentional choice here
+with its own considerations.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, it does something truly grand:
+it combats the ubiquitous analysis paralysis
+among gamers that prevent us
+from ever using our items.
+There are no single-use merch items
+and there are no ways that not using an item
+in a particular fight would benefit you
+in a fight further down the road.
+The only thing it costs you
+if you want to use an item
+is money,
+which is easily acquired.&lt;&#x2F;p&gt;
+&lt;p&gt;A large part of this game
+is dependent on &lt;strong&gt;building your character&lt;&#x2F;strong&gt;.
+But, like, in a cool and innovative way.
+Many games, including some that I quite like,
+encourage you to pursue
+a specialized build for your character,
+but give you very little incentive to do so
+as just randomly picking moves and stats
+will get you to the end with no major hitches.
+In &lt;em&gt;Deathbulge&lt;&#x2F;em&gt;,
+this couldn&#x27;t be further from the truth.
+You have one &quot;beat&quot; slot that can be filled
+from a shared pool of options,
+three &quot;mod&quot; slots that contain moves
+unique to your character,
+and one (later two) &quot;patch&quot; slots
+(again, pulling from a combined pool)
+which provide passive benefits.
+All told, that&#x27;s not too much space to work with,
+meaning that there is &lt;strong&gt;no room for fluff&lt;&#x2F;strong&gt;.
+You have a lot of choices for each slot,
+so find those synergies or die.
+This is the first game that I&#x27;ve played
+that has actually gotten me to spend time
+theorycrafting potential combinations.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;reviews&#x2F;dbbotb&#x2F;gear.png&quot; alt=&quot;An early-game view of the gear menu in Deathbulge: Battle of the Bands&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The one major thing in battles
+that doesn&#x27;t strictly adhere
+to this philosophy
+is items.
+As mentioned previously,
+you do have access
+to a wide variety of merch items
+by the end of the game,
+which on paper seems like it could break
+the careful balance of battles.
+In practice, they do not
+and probably cannot break the game
+and in fact add even more interest
+to the battle system.
+Many of the good merch items
+eat up sizeable chunks
+of even the maximum final stock count.
+In fact, stock is the only resource in a battle
+that is &lt;em&gt;truly&lt;&#x2F;em&gt; limited
+since Hype (this game&#x27;s resource
+that can be expended to perform moves,
+like MP or SP in other games)
+refills automatically
+and health can be recovered.
+Even new lives can be cheap
+depending on your build and situation.
+Every other advantage is gained
+as you use your moves.
+But if you want even &lt;em&gt;one&lt;&#x2F;em&gt; effect
+that you didn&#x27;t intentionally build for,
+you can technically have it,
+but that&#x27;s coming out
+of your only limited resource pool.
+Tough luck.&lt;&#x2F;p&gt;
+&lt;p&gt;At this point,
+I&#x27;ll take a bit of a &lt;strong&gt;diversion&lt;&#x2F;strong&gt;
+to talk about my own build a bit
+because it&#x27;s illustrative
+of one of my few problems with this game.
+Feel free to skip this part.
+Although I really loved
+trying to come up with builds,
+I stumbled onto something really effective
+about halfway through the game
+and as much as I wanted to experiment
+with other kinds of builds,
+it just kept working
+and, in fact, the same build
+just kept getting more effective
+with the addition of more mods
+that just made it even more effective.&lt;&#x2F;p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+The core of the engine,
+for those curious,
+is as follows (contains spoilers):
+&lt;&#x2F;summary&gt;
+&lt;p&gt;Make Faye a &lt;strong&gt;Show-Off&lt;&#x2F;strong&gt;
+and give her heavy-hitting Melody moves
+that apply effects to your own bar.
+Make Ian a &lt;strong&gt;Headbanger&lt;&#x2F;strong&gt;
+and give him heavy-hitting Noise moves
+that apply effects to the opponent&#x27;s bar.
+Give Briff &lt;strong&gt;restorative moves&lt;&#x2F;strong&gt;
+that apply Soothe and its variants
+and, crucially, &lt;strong&gt;Good Vibe Preservation&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+To set up a tough fight:
+&lt;&#x2F;summary&gt;
+&lt;p&gt;Start by filling your bar with effects,
+Faye&#x27;s speed from the show-off class
+often lets you get one or more of these in
+before the enemy gets one turn.
+Then, have Briff use Good Vibe Preservation.
+At this point, you will be shielded
+from the brunt of many attacks
+both in terms of hit points and measure effects.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, all members of the party
+are able to use
+whatever moves they want
+without too much risk
+as most enemies
+are not equipped with moves
+that can shred through
+your now-protected measure effects.
+I think I can count on one hand
+the number of times
+I came across an enemy that applies
+more than two measure effects at once,
+so in the course of normal battle
+you should have plenty of warning
+to run Good Vibe Preservation again.
+Also, if you ever have a bad bar,
+GVP can clear out the negative effects
+and advance you to an unshielded effect
+that you can safely write over
+either with Faye or Briff.&lt;&#x2F;p&gt;
+&lt;p&gt;Play cautiously,
+don&#x27;t let them touch your bar,
+and if you ever lose a battle,
+set up harder.&lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+At the end of the game, my loadout was:
+&lt;&#x2F;summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Faye&lt;&#x2F;strong&gt;: Axe of Annihilation, Breezin&#x27;, and Dazzling Shred.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ian&lt;&#x2F;strong&gt;: Zero Hertz, Mega Pop Slap, and Palm Destroyer.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Briff&lt;&#x2F;strong&gt;: GONG, Weaver of Darkness, and Good Vibe Preservation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;After writing this section,
+I actually discovered something interesting:
+a lot of the gear that I was using
+was actually buffed in the 1.1.0 update.
+So, uh, mission accomplished
+with those buffs I guess.&lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+&lt;p&gt;I liked my loadout, and I felt powerful while using it
+(up until the final boss, which really tested me)
+but it left most party members with their &lt;strong&gt;default class&lt;&#x2F;strong&gt;
+and I still ended up using quite a few mods
+that I got at the beginning of the game,
+so while I was did swap some out,
+it didn&#x27;t feel like I was constantly innovating,
+just switching to a better variant of the same strategy.
+At one point I tried swapping some of my characters classes
+while keeping the engine proper intact
+to see if I could try something different,
+but it just didn&#x27;t feel effective
+and it would have taken a lot of experimenting
+to get it to work, I think.
+Furthermore, I know there were inefficiencies
+even in my final loadout.
+Some moves were quite rarely used
+and some mods even got in the way more than they helped.
+But I never &lt;em&gt;had&lt;&#x2F;em&gt; to iron that out,
+and it started to feel just a bit cheap
+later on in the game.&lt;&#x2F;p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+One slightly spoilery note
+about balancing in the endgame:
+&lt;&#x2F;summary&gt;
+&lt;p&gt;I did appreciate, though,
+how the level counter is capped at 20.
+At one point I was starting to get concerned
+that I was going to find myself overleveled
+and that I would end up
+just ripping through the final boss
+without feeling that I&#x27;d earned it.
+But the level cap
+is intelligently placed
+such that for the final fights in the game,
+you can&#x27;t just level past them.
+You have to get good enough
+at the actual mechanics of the game
+and create a good loadout
+if you want to reach the end.&lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+&lt;p&gt;&lt;strong&gt;Diversion over.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Somehow I&#x27;ve gotten this far
+without even mentioning the art in this game.
+This game has a stupid amount of art and animation.
+I swear, almost every cutscene in this game
+has at least one character animation or dialogue portrait
+that I had never seen before.
+I was blown away
+by just how expressive these characters are.
+In battle, many moves have their own unique animations
+that don&#x27;t play anywhere else.
+And, as mentioned, there is no shortage of moves.
+Also, all of the main characters
+have different class-based appearances
+which affect their sprites
+in the overworld and in battle
+as well as in their numerous dialogue expressions.&lt;&#x2F;p&gt;
+&lt;p&gt;And it&#x27;s not just the characters.
+Some of my favorite animations in this game
+are in the combat elements.
+The measure effects aren&#x27;t static images.
+They have detailed animations when they appear
+and they move and sway in oddly satisfying ways
+while they sit in the bar,
+helping to provide a clear visual language
+during the otherwise very stimulating battles.&lt;&#x2F;p&gt;
+&lt;p&gt;The game&#x27;s principle artist
+is &lt;a href=&quot;https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;deathbulge.bsky.social&quot;&gt;Dan Martin&lt;&#x2F;a&gt;,
+who runs a webcomic
+(also called &lt;a href=&quot;https:&#x2F;&#x2F;deathbulge.com&quot;&gt;&lt;em&gt;Deathbulge&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;).
+This comic originated
+&lt;a href=&quot;https:&#x2F;&#x2F;deathbulge.com&#x2F;comics&#x2F;343&quot;&gt;several&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;deathbulge.com&#x2F;comics&#x2F;384&quot;&gt;memes&lt;&#x2F;a&gt;
+that you&#x27;ve probably seen around.
+He also apparently
+created &lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;deathbulge&#x2F;status&#x2F;1075764020072697857&quot;&gt;this image&lt;&#x2F;a&gt;
+if that is worth anything to you.
+If you go back to the comic
+after finishing the game
+or if you were familiar with the comic
+and played the game,
+you would notice some shared characters
+and even a few familiar bits.
+By Dan&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;deathbulge.com&#x2F;comics&#x2F;435&quot;&gt;own admission&lt;&#x2F;a&gt;,
+he spent every day
+for most of a decade
+working on the game.
+I am no artist,
+but I can recognize effort
+when I see it.
+The game is a cartoony visual feast,
+manic and exaggerated
+in just the right way
+to complement the game&#x27;s
+off-the-wall sense of humor.
+This game wouldn&#x27;t have hit &lt;em&gt;nearly&lt;&#x2F;em&gt; the same
+if there hadn&#x27;t been such a clear emphasis
+on the aesthetic
+(although if there were even half as many
+unique dialogue portraits in this game,
+it would have still been more expressive
+than even most other story-based games
+that I have played in the past).&lt;&#x2F;p&gt;
+&lt;p&gt;That all being said,
+I just didn&#x27;t really vibe with the story,
+at least at the start.
+Like many video game stories,
+things start lower-stakes
+and gradually the intensity ramps up.
+I was frustrated by the fact
+that the first few chapters
+were completely unrelated
+to the Battle of the Bands.
+Even though plot elements from them
+do come back later
+and are instrumental in wrapping up the game,
+they felt so irrelevant at the time
+and I still don&#x27;t think
+that it was that great of a start
+to the game.
+I&#x27;m glad that the gameplay,
+the humor,
+the characters,
+and the worldbuilding
+kept me going until the story
+really started to pick up.&lt;&#x2F;p&gt;
+&lt;p&gt;I also had high expectations for the
+&lt;a href=&quot;https:&#x2F;&#x2F;deathbulge.bandcamp.com&#x2F;album&#x2F;deathbulge-battle-of-the-bands-ost&quot;&gt;soundtrack&lt;&#x2F;a&gt;,
+given the entire theming of the game
+and whoops, we hit peak again.
+There&#x27;s over two hours of music in this game
+created by the two composers,
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;lesliewai&quot;&gt;Leslie Wai&lt;&#x2F;a&gt;
+and &lt;a href=&quot;http:&#x2F;&#x2F;discobible.com&#x2F;&quot;&gt;Patrick Henaghen&lt;&#x2F;a&gt;.
+There is no lack of variety here.
+A large amount of the music in this game
+is instrumental rock,
+given that that is the style
+that the main characters play.
+But certain other bands
+introduce different genres
+including heavy metal, synth pop,
+jazz fusion, smooth jazz,
+and a lot of funk.
+I urge you to give it a listen.
+There&#x27;s a lot to keep you occupied.
+And a lot of these songs
+are rather substantial.
+I&#x27;m used to fairly short loops
+in video game music
+but the composers for this game
+have given us a bunch of
+multiple-minute tracks
+that make even walking around in the world
+feel interesting.&lt;&#x2F;p&gt;
+&lt;p&gt;And while I&#x27;m individually thanking
+every member of the team,
+I might as well get everyone.
+&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;diviocy&quot;&gt;Kyle Jenkins&lt;&#x2F;a&gt;
+and &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;raidenthequick&quot;&gt;Scott Walenty&lt;&#x2F;a&gt;
+of &lt;a href=&quot;https:&#x2F;&#x2F;www.fivehousesgames.com&#x2F;index.html&quot;&gt;Five Houses Games&lt;&#x2F;a&gt;,
+handled the technical aspects
+of game development
+for &lt;em&gt;Deathbulge: Battle of the Bands&lt;&#x2F;em&gt;.
+This game is extremely smooth
+and polished to a sheen
+to the point of being almost frictionless
+and that would not have been possible
+without the diligent work
+of these two members of the team.
+Also, I need to show this
+because it is genuinely one of the coolest things
+that a game developer has ever done.
+Dan actually &lt;a href=&quot;https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;deathbulge.bsky.social&#x2F;post&#x2F;3lgvv25ss222a&quot;&gt;drew some fanart&lt;&#x2F;a&gt;
+of the code of this game
+to thank the team for their work.&lt;&#x2F;p&gt;
+&lt;p&gt;My save file,
+which finished up at 75% completion,
+is at 15 hours,
+give or take.
+I would say that 100% completion
+would probably take
+about 20 hours.
+By that metric,
+this is a compact game,
+by JRPG standards at least.
+I think in some ways
+the length is actually ideal.
+The game does a good job
+of not overstaying its welcome.
+If the game were &lt;em&gt;too&lt;&#x2F;em&gt; much longer,
+it would probably start
+to feel repetitious
+and its humor might start to grate,
+so I&#x27;m glad that the devs
+decided to cap it off here.
+At the same time,
+a part of me is screaming
+that I just want to play eight more chapters
+of the same exact same game.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Deathbulge: Battle of the Bands&lt;&#x2F;em&gt;
+has no right being as obscure as it is.
+Only 500 reviews? Are you kidding me?
+This game is an innovative modern classic
+and should be recognized as such.
+I want to see swaths of games come out
+that are inspired by this one
+if only because
+I need more of this game.
+There is replay value here.
+I would like to return to this game
+in a year or so
+and force myself to enjoy
+some alternative strategies.&lt;&#x2F;p&gt;
+&lt;p&gt;This game gets a &lt;strong&gt;hearty recommendation&lt;&#x2F;strong&gt;.
+I think more people should be aware of it,
+which is why I&#x27;m in the process of telling
+all of my friends to play it.
+If even one part of this appeals to you,
+I&#x27;d encourage you to give it a try
+as even one
+of the previously discussed talking points
+would be enough to merit a purchase,
+especially if it&#x27;s on sale.
+To wrap up, though,
+I would just like to mention that,
+while I loved the fact
+that every part of the game
+from the combat to items to teambuilding
+was all a fun open-ended puzzle,
+that might not vibe with you.
+Maybe skip this one
+if you want an RPG
+where you can just blast through enemies.
+But if that particular descriptor
+does not apply to you,
+there&#x27;s no reason not to give this one a try.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;(Review adapted and expanded from my
+&lt;a href=&quot;https:&#x2F;&#x2F;steamcommunity.com&#x2F;profiles&#x2F;76561199158155458&#x2F;recommended&#x2F;1083790&quot;&gt;steam review of this game&lt;&#x2F;a&gt;)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
