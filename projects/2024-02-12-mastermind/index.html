@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+<title>
+	Mastermind
+		| Projects
+		| CodeTriangle&#x27;s Curiosities
+</title>
+  <meta name="title" content="Mastermind">
+<meta name="description" content="" />
+
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <style>  body {
+    font-family: sans-serif;
+    margin: auto;
+    padding: 0.5em;
+    max-width: 720px;
+    background: linear-gradient(#54aeef, #3889c4);
+    background-attachment: fixed;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  header, main, footer {
+    background-color: #eee;
+    padding: 0.75em 1em;
+    margin: 1em 0;
+    border-radius: 0.5em;
+  }
+
+  main > *:first-child {
+    margin-top: 0;
+  }
+
+  main > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #header-icon {
+    height: 5rem;
+    float: left;
+    margin: 0 10px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a, a > strong, a > b {
+    color: #3273dc;
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  details {
+    background-color: #ddd;
+    padding: 0.2em 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  input {
+    font-size: 1rem;
+  }
+
+  main,article {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  main img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  code {
+    padding: 2px 5px;
+    border-radius: 5px;
+  }
+
+  :not(pre) > code {
+    background-color: #ddd;
+    color: #333;
+  }
+
+  pre {
+    border-radius: 10px;
+  }
+
+  pre code {
+    display: block;
+    padding: 10px 20px;
+    white-space: pre-wrap;
+    font-size: 0.875rem;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 5px solid #ccc;
+    color: #222;
+    padding-left: 10px;
+    font-style: italic;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+  #toc ol {
+    counter-reset: item;
+  }
+
+  #toc li {
+    counter-increment: item;
+  }
+
+  #toc li::marker {
+    content: counters(item, ".") ". ";
+  }
+
+  /* blog posts */
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: #ddd;
+    }
+
+    header, main, footer {
+      background-color: #333;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a, a > strong, a > b {
+      color: #8cc2dd;
+    }
+
+    :not(pre) > code {
+      background-color: #222;
+      color: #ccc;
+    }
+  
+    pre {
+      border-radius: 10px;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    details {
+      background-color: #444;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+
+  }
+</style>
+  </head>
+<body>
+  <header>
+  <a href="https:&#x2F;&#x2F;codetriangle.me" class="title">
+    <img id="header-icon" src="/images/trongle.png">
+    <h2>CodeTriangle&#x27;s Curiosities</h2>
+  </a>
+  <nav>
+    <a href="https:&#x2F;&#x2F;codetriangle.me">Home</a>
+      <a href="https://codetriangle.me/blog/">Tech Blog</a>
+      <a href="https://codetriangle.me/projects/">Projects</a>
+      <a href="https://codetriangle.me/reviews/">Game Reviews</a>
+  </nav>
+</header>
+
+  <main>
+    <h1>Mastermind</h1>
+      <p>
+        <i>
+          <time datetime='2024-02-12T00:00:00+00:00' pubdate>12 February 2024</time>
+        </i>
+      </p>
+    
+  <p><img src="/images/projects/microcontroller-success.jpg" alt="A completed game of Mastermind" /></p>
+<p>This is a page about
+my final project for ECE 3710: Microcontrollers.
+You can find the source code
+on GitHub <a href="https://github.com/CodeTriangle/ece3710-final">here</a>.</p>
+<p>This project,
+written by myself and a lab partner,
+implements a digital version
+of the classic 2-player board game
+<a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)">Mastermind</a>
+for an STM32 microcontroller
+in C and assembly.</p>
+<p>It requires:</p>
+<ul>
+<li>an <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32l476rg.html">STM32L476RG</a> microcontroller</li>
+<li>a 16x16 pixel WS2812B LED array</li>
+<li>six push buttons
+(as currently written,
+the code assumes they will be
+red, yellow, green, blue, orange, and purple,
+in that order)</li>
+</ul>
+<p>This project was a lot of fun to work on
+because of how many topics
+I was able to touch on
+while working on it.
+I created what is essentially
+a very low-level device driver
+and basic graphics API
+for drawing to the LED array.</p>
+<p>The WS2812B chip is actually very well supported
+by various LED libraries,
+notably <a href="https://fastled.io/">FastLED</a>,
+which every website I went to for help
+suggested I use.
+I would have simply used this
+if the class hadn't been focused
+on interfacing with
+a microcontroller's memory map directly
+rather than relying on libraries
+such as Arduino
+(which FastLED depends on).</p>
+<p>We considered other options
+for LED arrays,
+such as <a href="https://www.adafruit.com/product/607">this one from Adafruit</a>.
+They helpfully proclaim,</p>
+<blockquote>
+<p>Of course, we wouldn't leave you
+with a datasheet and a "good luck!"
+We have tutorials and add-on boards
+that will make connecting and usage very easy!</p>
+</blockquote>
+<p>Again, since none of these tutorials
+would work with our environment,
+I decided to look at that datasheet
+that they mentioned.
+The datasheet, however,
+includes no mention
+of the protocol
+required to control the thing
+other than that it uses 13 pins.
+In reality, the folks at Adafruit
+left me with no datasheet and a "good luck."
+I spent only a couple of hours
+searching for information
+before I decided that the WS2812B,
+whose datasheet was obtuse but existent,
+would probably be a better choice.</p>
+<p>Nontrivial effort was required
+to decipher the WS2812B's datasheet.
+When I finally did,
+I realized that communicating with the thing
+would be a tall task indeed.</p>
+<p>The WS2812B chip requires
+a 5-volt wire,
+a ground wire,
+and a data-in signal.
+It produces a data-out signal,
+which can be wired to another WS2812B chip.
+In order to not use a clock,
+the WS2812B chip interprets the logic HIGH
+and logic LOW signals
+on the data-in line
+in specific ways
+over specific absolute time intervals
+as zeroes and ones,
+forming a sequence of three eight-bit numbers,
+which are used as the intensity
+of the green, red, and blue LEDs,
+in that order.
+All bits following the initial 24 received
+are sent on to the next light in the chain.</p>
+<p>In particular,
+each bit takes 1.25μs ± 600ns
+to transmit.
+Each bit begins
+at logic HIGH,
+and the amount of time
+the line is held
+at logic HIGH
+determines whether the bit
+is a zero or one.</p>
+<table><thead><tr><th style="text-align: center">Time High</th><th style="text-align: center">Time Low</th><th style="text-align: center">Bit Sent</th></tr></thead><tbody>
+<tr><td style="text-align: center">400ns ± 150ns</td><td style="text-align: center">850ns ± 150ns</td><td style="text-align: center">0</td></tr>
+<tr><td style="text-align: center">800ns ± 150ns</td><td style="text-align: center">450ns ± 150ns</td><td style="text-align: center">1</td></tr>
+</tbody></table>
+<p>Holding the line at logic LOW for 50μs
+resets the display
+the next time the line is pulled to logic HIGH.</p>
+<p>To figure out just how fast
+I would need to drive this thing,
+I wrote a simple python script
+to calculate the minimum
+and maximum amount
+of clock cycles
+that would comprise
+each of the different windows:</p>
+<pre data-lang="python" style="background-color:#282828;color:#fdf4c1aa;" class="language-python "><code class="language-python" data-lang="python"><span>T0H </span><span style="color:#fe8019;">= </span><span style="color:#d3869b;">0.40e-6
+</span><span>T1H </span><span style="color:#fe8019;">= </span><span style="color:#d3869b;">0.80e-6
+</span><span>T0L </span><span style="color:#fe8019;">= </span><span style="color:#d3869b;">0.85e-6
+</span><span>T1L </span><span style="color:#fe8019;">= </span><span style="color:#d3869b;">0.45e-6
+</span><span>
+</span><span>margin </span><span style="color:#fe8019;">= </span><span style="color:#d3869b;">150e-9
+</span><span>
+</span><span style="color:#fa5c4b;">for </span><span>spd </span><span style="color:#fa5c4b;">in </span><span>[</span><span style="color:#d3869b;">4e6</span><span>, </span><span style="color:#d3869b;">8e6</span><span>, </span><span style="color:#d3869b;">16e6</span><span>, </span><span style="color:#d3869b;">24e6</span><span>, </span><span style="color:#d3869b;">32e6</span><span>, </span><span style="color:#d3869b;">48e6</span><span>, </span><span style="color:#d3869b;">64e6</span><span>, </span><span style="color:#d3869b;">80e6</span><span>]:
+</span><span>    </span><span style="color:#fabd2f;">print</span><span style="color:#fdf4c1;">(</span><span style="color:#fa5c4b;">f</span><span style="color:#b8bb26;">&quot;TIMINGS FOR SPEED=</span><span style="color:#fdf4c1;">{</span><span style="color:#fabd2f;">int</span><span style="color:#fdf4c1;">(spd)}</span><span style="color:#b8bb26;">&quot;</span><span style="color:#fdf4c1;">)
+</span><span>    </span><span style="color:#fabd2f;">print</span><span style="color:#fdf4c1;">(</span><span style="color:#fa5c4b;">f</span><span style="color:#b8bb26;">&quot;</span><span style="color:#fdf4c1;">{</span><span style="color:#b8bb26;">&#39;goal&#39;</span><span style="color:#fdf4c1;">:&gt;8}{</span><span style="color:#b8bb26;">&#39;min&#39;</span><span style="color:#fdf4c1;">:&gt;10}{</span><span style="color:#b8bb26;">&#39;max&#39;</span><span style="color:#fdf4c1;">:&gt;10}{</span><span style="color:#b8bb26;">&#39;minclk&#39;</span><span style="color:#fdf4c1;">:&gt;10}{</span><span style="color:#b8bb26;">&#39;maxclk&#39;</span><span style="color:#fdf4c1;">:&gt;10}</span><span style="color:#b8bb26;">&quot;</span><span style="color:#fdf4c1;">)
+</span><span>    </span><span style="color:#fa5c4b;">for </span><span>t </span><span style="color:#fa5c4b;">in </span><span>[T0H, T0L, T1H, T1L]:
+</span><span>        mini</span><span style="color:#fe8019;">=</span><span>t</span><span style="color:#fe8019;">-</span><span>margin;
+</span><span>        maxi</span><span style="color:#fe8019;">=</span><span>t</span><span style="color:#fe8019;">+</span><span>margin;
+</span><span>        </span><span style="color:#fabd2f;">print</span><span style="color:#fdf4c1;">(</span><span style="color:#fa5c4b;">f</span><span style="color:#b8bb26;">&quot;</span><span style="color:#fdf4c1;">{t:8}{mini:10.2}{maxi:10.2}{mini</span><span style="color:#fe8019;">*</span><span style="color:#fdf4c1;">spd:10.2f}{maxi</span><span style="color:#fe8019;">*</span><span style="color:#fdf4c1;">spd:10.2f}</span><span style="color:#b8bb26;">&quot;</span><span style="color:#fdf4c1;">)
+</span><span>
+</span><span>    </span><span style="color:#fabd2f;">print</span><span style="color:#fdf4c1;">()
+</span></code></pre>
+<p>Turns out, hitting these windows
+on the chip we had
+is no joke.
+At the default clock speed of 4 MHz,
+the maximum time for the shortest interval
+is 2.2 clock cycles,
+which is not remotely possible to hit.</p>
+<table><thead><tr><th style="text-align: right">Goal (ns)</th><th style="text-align: right">Min time (ns)</th><th style="text-align: right">Max time (ns)</th><th style="text-align: right">Min time (clock cycles)</th><th style="text-align: right">Max time (clock cycles)</th></tr></thead><tbody>
+<tr><td style="text-align: right">400</td><td style="text-align: right">250</td><td style="text-align: right">550</td><td style="text-align: right">1.00</td><td style="text-align: right">2.20</td></tr>
+<tr><td style="text-align: right">850</td><td style="text-align: right">700</td><td style="text-align: right">1000</td><td style="text-align: right">2.80</td><td style="text-align: right">4.00</td></tr>
+<tr><td style="text-align: right">800</td><td style="text-align: right">649</td><td style="text-align: right">950</td><td style="text-align: right">2.60</td><td style="text-align: right">3.80</td></tr>
+<tr><td style="text-align: right">450</td><td style="text-align: right">300</td><td style="text-align: right">600</td><td style="text-align: right">1.20</td><td style="text-align: right">2.40</td></tr>
+</tbody></table>
+<p>The windows only begin to be slightly forgiving at 32 MHz,
+where the maximum time for the shortest interval
+is 17.6 clock cycles:</p>
+<table><thead><tr><th style="text-align: right">Goal (ns)</th><th style="text-align: right">Min time (ns)</th><th style="text-align: right">Max time (ns)</th><th style="text-align: right">Min time (clock cycles)</th><th style="text-align: right">Max time (clock cycles)</th></tr></thead><tbody>
+<tr><td style="text-align: right">400</td><td style="text-align: right">250</td><td style="text-align: right">550</td><td style="text-align: right">8.00</td><td style="text-align: right">17.60</td></tr>
+<tr><td style="text-align: right">850</td><td style="text-align: right">700</td><td style="text-align: right">1000</td><td style="text-align: right">22.40</td><td style="text-align: right">32.00</td></tr>
+<tr><td style="text-align: right">800</td><td style="text-align: right">649</td><td style="text-align: right">950</td><td style="text-align: right">20.80</td><td style="text-align: right">30.40</td></tr>
+<tr><td style="text-align: right">450</td><td style="text-align: right">300</td><td style="text-align: right">600</td><td style="text-align: right">9.60</td><td style="text-align: right">19.20</td></tr>
+</tbody></table>
+<p>I fiddled around for a few hours
+creating a C procedure,
+but the exact length
+of the compiler's code
+in clock cycles
+was just too unpredictable.</p>
+<p>So I had to go one step further
+and write an optimized assembly procedure.
+I'll spare you the exact details,
+but I was able to hit the timing intervals
+with the 32 MHz clock
+with a few clock cycles to spare, even.
+At a few points,
+I had to insert no-op instructions
+to get to the approximate center
+of the timing window.</p>
+<p>Once I had the code
+communicating with the LEDs,
+it was time to start defining my API.
+The first thing to do
+was set up all the different colors.
+They went through several variations,
+but the final colors are defined as follows:</p>
+<pre data-lang="c" style="background-color:#282828;color:#fdf4c1aa;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#fa5c4b;">#define </span><span style="color:#8ec07c;">BLACK  </span><span style="color:#d3869b;">0
+</span><span style="color:#fa5c4b;">#define </span><span style="color:#8ec07c;">RED    </span><span style="color:#d3869b;">1
+</span><span style="color:#fa5c4b;">#define </span><span style="color:#8ec07c;">YELLOW </span><span style="color:#d3869b;">2
+</span><span style="color:#fa5c4b;">#define </span><span style="color:#8ec07c;">BLUE   </span><span style="color:#d3869b;">3
+</span><span style="color:#fa5c4b;">#define </span><span style="color:#8ec07c;">GREEN  </span><span style="color:#d3869b;">4
+</span><span style="color:#fa5c4b;">#define </span><span style="color:#8ec07c;">PURPLE </span><span style="color:#d3869b;">5
+</span><span style="color:#fa5c4b;">#define </span><span style="color:#8ec07c;">ORANGE </span><span style="color:#d3869b;">6
+</span><span style="color:#fa5c4b;">#define </span><span style="color:#8ec07c;">WHITE  </span><span style="color:#d3869b;">7
+</span><span>
+</span><span style="color:#fa5c4b;">static </span><span style="color:#fabd2f;">uint8_t</span><span> colors[</span><span style="color:#d3869b;">8</span><span>][</span><span style="color:#d3869b;">3</span><span>] </span><span style="color:#fe8019;">= </span><span>{
+</span><span>    </span><span style="font-style:italic;color:#928374;">//            GRN   RED   BLU
+</span><span>    [BLACK]  </span><span style="color:#fe8019;">= </span><span>{ </span><span style="color:#d3869b;">0x00</span><span>, </span><span style="color:#d3869b;">0x00</span><span>, </span><span style="color:#d3869b;">0x00 </span><span>},
+</span><span>    [WHITE]  </span><span style="color:#fe8019;">= </span><span>{ </span><span style="color:#d3869b;">0x10</span><span>, </span><span style="color:#d3869b;">0x10</span><span>, </span><span style="color:#d3869b;">0x10 </span><span>},
+</span><span>    [RED]    </span><span style="color:#fe8019;">= </span><span>{ </span><span style="color:#d3869b;">0x00</span><span>, </span><span style="color:#d3869b;">0x20</span><span>, </span><span style="color:#d3869b;">0x00 </span><span>},
+</span><span>    [GREEN]  </span><span style="color:#fe8019;">= </span><span>{ </span><span style="color:#d3869b;">0x2A</span><span>, </span><span style="color:#d3869b;">0x00</span><span>, </span><span style="color:#d3869b;">0x03 </span><span>},
+</span><span>    [BLUE]   </span><span style="color:#fe8019;">= </span><span>{ </span><span style="color:#d3869b;">0x0A</span><span>, </span><span style="color:#d3869b;">0x00</span><span>, </span><span style="color:#d3869b;">0x2A </span><span>},
+</span><span>    [YELLOW] </span><span style="color:#fe8019;">= </span><span>{ </span><span style="color:#d3869b;">0x25</span><span>, </span><span style="color:#d3869b;">0x2A</span><span>, </span><span style="color:#d3869b;">0x00 </span><span>},
+</span><span>    [PURPLE] </span><span style="color:#fe8019;">= </span><span>{ </span><span style="color:#d3869b;">0x00</span><span>, </span><span style="color:#d3869b;">0x15</span><span>, </span><span style="color:#d3869b;">0x20 </span><span>},
+</span><span>    [ORANGE] </span><span style="color:#fe8019;">= </span><span>{ </span><span style="color:#d3869b;">0x08</span><span>, </span><span style="color:#d3869b;">0x35</span><span>, </span><span style="color:#d3869b;">0x00 </span><span>},
+</span><span>};
+</span></code></pre>
+<p>Note that the highest value
+in the entire array
+is <code>0x2A</code>.
+These lights burn <em>bright</em> at full intensity.
+Even at half intensity,
+it can hurt to look at the board too long.
+Only by bumping everything down
+to a sixth of the maximum value
+is it possible to look at these LEDs
+at relatively close range.</p>
+<p>After that,
+it was simply a matter
+of decoding the snaking pattern
+that the data line followed
+to get screen coordinates,
+then writing a function to set a pixel.
+Further drawing functions
+were out of scope of the assignment,
+but drawing lines,
+circles,
+and other objects
+with only the aid of a pixel setting function
+is a well-explored field;
+thus its implementation
+is left as an exercise
+to the reader.
+The <code>set_pixel</code> function
+is included below:</p>
+<pre data-lang="c" style="background-color:#282828;color:#fdf4c1aa;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#fa5c4b;">void </span><span style="color:#8ec07c;">set_pixel</span><span>(
+</span><span>    </span><span style="color:#fabd2f;">uint8_t </span><span style="color:#fe8019;">*</span><span style="color:#fdf4c1;">image</span><span>,
+</span><span>    </span><span style="color:#fa5c4b;">const </span><span style="color:#fabd2f;">uint8_t </span><span style="color:#fdf4c1;">x</span><span>,
+</span><span>    </span><span style="color:#fa5c4b;">const </span><span style="color:#fabd2f;">uint8_t </span><span style="color:#fdf4c1;">y</span><span>,
+</span><span>    </span><span style="color:#fa5c4b;">const </span><span style="color:#fabd2f;">uint8_t </span><span style="color:#fdf4c1;">color</span><span>,
+</span><span>) {
+</span><span>    </span><span style="color:#fabd2f;">uint8_t</span><span> yoffset </span><span style="color:#fe8019;">=</span><span> x </span><span style="color:#fe8019;">% </span><span style="color:#d3869b;">2 </span><span style="color:#fe8019;">? </span><span>(</span><span style="color:#d3869b;">15 </span><span style="color:#fe8019;">-</span><span> y) </span><span style="color:#fe8019;">:</span><span> y;
+</span><span>    </span><span style="color:#fabd2f;">uint8_t</span><span> xoffset </span><span style="color:#fe8019;">= </span><span>(</span><span style="color:#d3869b;">15 </span><span style="color:#fe8019;">-</span><span> x) </span><span style="color:#fe8019;">* </span><span style="color:#d3869b;">16</span><span>;
+</span><span>    </span><span style="color:#fabd2f;">uint8_t</span><span> idx </span><span style="color:#fe8019;">=</span><span> xoffset </span><span style="color:#fe8019;">+</span><span> yoffset;
+</span><span>
+</span><span>    image[idx] </span><span style="color:#fe8019;">=</span><span> color;
+</span><span>}
+</span></code></pre>
+<p><code>image</code> is a buffer of 256 eight-bit integers,
+each representing a color in the <code>colors</code> array
+included in the snippet above the last.
+These are turned into
+their corresponding three-byte representations,
+which are sent to the array at the end.</p>
+<p>The rest of the project including
+the button interface,
+the microcontroller initialization,
+and the game logic
+were interesting to implement
+but they were not novel for me
+so I won't go over any of it here.</p>
+
+  <p>
+        Tags:
+          <a href="https://codetriangle.me/tags/microcontrollers/">#microcontrollers</a>
+          <a href="https://codetriangle.me/tags/gamedev/">#gamedev</a>
+          <a href="https://codetriangle.me/tags/c/">#c</a>
+          <a href="https://codetriangle.me/tags/assembly/">#assembly</a>
+  </p>
+  </main>
+<footer>
+	&copy; CodeTriangle / Richard Snider<br>
+	<a href="/contact">Contact</a> &bull;
+	<a href="https://github.com/CodeTriangle">GitHub</a> &bull;
+	<a href="https://linkedin.com/in/codetriangle">LinkedIn</a>
+	<br>
+	The canonical version of this webpage
+	is at <a href="https://codetriangle.me">https://codetriangle.me</a>.
+</footer>
+</body>
+</html>

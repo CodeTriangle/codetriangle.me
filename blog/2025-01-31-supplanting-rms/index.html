@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+<title>
+	My Quest to Supplant RMS
+		| Tech Blog
+		| CodeTriangle&#x27;s Curiosities
+</title>
+  <meta name="title" content="My Quest to Supplant RMS">
+<meta name="description" content="" />
+
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <style>  body {
+    font-family: sans-serif;
+    margin: auto;
+    padding: 0.5em;
+    max-width: 720px;
+    background: linear-gradient(#54aeef, #3889c4);
+    background-attachment: fixed;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  header, main, footer {
+    background-color: #eee;
+    padding: 0.75em 1em;
+    margin: 1em 0;
+    border-radius: 0.5em;
+  }
+
+  main > *:first-child {
+    margin-top: 0;
+  }
+
+  main > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #header-icon {
+    height: 5rem;
+    float: left;
+    margin: 0 10px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a, a > strong, a > b {
+    color: #3273dc;
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  details {
+    background-color: #ddd;
+    padding: 0.2em 1em;
+    margin: 1em 0;
+    border-radius: 6px;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  input {
+    font-size: 1rem;
+  }
+
+  main,article {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  main img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  code {
+    padding: 2px 5px;
+    border-radius: 5px;
+  }
+
+  :not(pre) > code {
+    background-color: #ddd;
+    color: #333;
+  }
+
+  pre {
+    border-radius: 10px;
+  }
+
+  pre code {
+    display: block;
+    padding: 10px 20px;
+    white-space: pre-wrap;
+    font-size: 0.875rem;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 5px solid #ccc;
+    color: #222;
+    padding-left: 10px;
+    font-style: italic;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+  #toc ol {
+    counter-reset: item;
+  }
+
+  #toc li {
+    counter-increment: item;
+  }
+
+  #toc li::marker {
+    content: counters(item, ".") ". ";
+  }
+
+  /* blog posts */
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: #ddd;
+    }
+
+    header, main, footer {
+      background-color: #333;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a, a > strong, a > b {
+      color: #8cc2dd;
+    }
+
+    :not(pre) > code {
+      background-color: #222;
+      color: #ccc;
+    }
+  
+    pre {
+      border-radius: 10px;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    details {
+      background-color: #444;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+
+  }
+</style>
+  </head>
+<body>
+  <header>
+  <a href="https:&#x2F;&#x2F;codetriangle.me" class="title">
+    <img id="header-icon" src="/images/trongle.png">
+    <h2>CodeTriangle&#x27;s Curiosities</h2>
+  </a>
+  <nav>
+    <a href="https:&#x2F;&#x2F;codetriangle.me">Home</a>
+      <a href="https://codetriangle.me/blog/">Tech Blog</a>
+      <a href="https://codetriangle.me/projects/">Projects</a>
+      <a href="https://codetriangle.me/reviews/">Game Reviews</a>
+  </nav>
+</header>
+
+  <main>
+    <h1>My Quest to Supplant RMS</h1>
+      <p>
+        <i>
+          <time datetime='2025-01-31T00:00:00+00:00' pubdate>31 January 2025</time>
+        </i>
+      </p>
+    
+      <ol id="toc">
+      
+        <li>
+          <a href="https://codetriangle.me/blog/2025-01-31-supplanting-rms/#rms-richard-matthew-stallman">RMS (Richard Matthew Stallman)</a>
+          
+        </li>
+      
+        <li>
+          <a href="https://codetriangle.me/blog/2025-01-31-supplanting-rms/#rms-richard-michael-snider">RMS (Richard Michael Snider)</a>
+          
+        </li>
+      
+        <li>
+          <a href="https://codetriangle.me/blog/2025-01-31-supplanting-rms/#the-plan">The Plan</a>
+          
+            <ol>
+              
+                <li>
+                  <a href="https://codetriangle.me/blog/2025-01-31-supplanting-rms/#my-part">My Part</a>
+                </li>
+              
+                <li>
+                  <a href="https://codetriangle.me/blog/2025-01-31-supplanting-rms/#your-part">Your Part</a>
+                </li>
+              
+            </ol>
+          
+        </li>
+      
+      </ol>
+    
+  <h2 id="rms-richard-matthew-stallman">RMS (Richard Matthew Stallman)</h2>
+<p>The letters "RMS" will be very familiar
+to anyone who has so much as glimpsed into
+the FOSS community.
+For many people,
+Richard Matthew Stallman
+may indeed be the first person that they learn of
+in the entire space.</p>
+<p>His free software absolutism is funny.
+The <a href="https://stallman.org/stallman-computing.html">lengths to which he will bend</a>
+so that he doesn't have
+a single line of blasphemous nonfree code
+running on any machine he's used
+in the past ten years
+are objectively hilarious.
+At the same time,
+because of how ardent he is in this,
+it is easy to view this
+as a kind of purity
+to which us mortals could only aspire
+because we enjoy getting things done.</p>
+<p>Stallman is a spectacle.
+He has done a lot
+for the free software movement
+and I firmly believe that we would be
+in a much worse place without his contributions.
+He is to be commended for that.</p>
+<p>Commended, but not venerated.</p>
+<p>Nowadays, RMS is a figure
+who can't seem to escape controversy.
+Underneath the natural fascination
+with these kinds of quacks,
+it's easy to forget that the people themselves
+can actually be pretty crummy.
+Stallman fits into this category.
+Read <a href="https://drewdevault.com/2023/11/25/2023-11-26-RMS-on-sex.html">this blog post</a>
+or <a href="https://stallman-report.org/">this article</a>
+(<strong>extreme content warning for both</strong>)
+to learn a bit more
+about Stallman the man.
+It doesn't matter which; they cover similar points.</p>
+<p>But I don't just want to complain
+about a person I find to be a thorn in the side
+of the free software community.
+I'm offering a solution of my own, you see.
+Others have petitioned the FSF
+to boot him out of leadership <em>again</em>
+to no avail.
+My solution
+is to become the new RMS.</p>
+<h2 id="rms-richard-michael-snider">RMS (Richard Michael Snider)</h2>
+<p>That's me.</p>
+<p>My first name, Richard, is the same as Stallman's.
+Additionally, all three of my initials
+are the same as his initials.
+Simply put,
+I want to become the Richard that people think of
+when they say RMS.</p>
+<p>To clarify: I do <em>not</em> want
+to replace him as the leader of the FSF.
+My goal is simply to supplant him
+as the owner
+of the initialism RMS.</p>
+<p>Is this a plausible goal?
+Of course not.
+Is it funny to pretend that I actually want to try?
+It sure is!
+So here we go.</p>
+<h2 id="the-plan">The Plan</h2>
+<p>The plan is simple:
+I must make myself the subject of mass fascination
+within the FOSS space
+to the extent that Stallman's name
+is forgotten to time.</p>
+<p>The plan will be split into two parts.
+First, I will make some commitments to you,
+dear reader.
+Second, I will ask you
+to help me.</p>
+<h3 id="my-part">My Part</h3>
+<p>I already have a website
+which is clandestine in appearance
+and which exists almost exclusively
+to hold the canonical versions
+of my opinions.
+I will be writing posts on this blog
+every month of this year.
+With enough eyes here,
+I will develop a following of people
+who are endeared to me
+on account of my silly anecdotes
+and highly specific opinions on tech.</p>
+<p>This is the functional purpose
+of <a href="https://stallman.org">https://stallman.org</a> these days,
+so I consider this to be vital
+to my plan.</p>
+<p>The point where this diverges
+from Stallman's approach
+is that I will not say
+anything terrible or heinous
+that will make everyone hate me.
+Nope, just good old silly tech takes
+from this RMS.</p>
+<p>I will also be modifying the language
+on this site
+to explicitly emphasize
+that I am RMS (but not <em>that</em> RMS).</p>
+<h3 id="your-part">Your Part</h3>
+<p>Your part is simple:
+spread the knowledge
+that there is a new RMS in town
+and that he's someone
+you can feel good about liking.
+Link this blog everywhere.
+Make sure people know
+that I am coming
+for Stallman's title of RMS.</p>
+<p>But, I wouldn't be a true RMS
+without a copypasta of my own.
+Whenever someone is acting
+excessively Stallman-esque,
+post the following:</p>
+<blockquote>
+<p>Richard Stallman's achievements
+and leadership of the GNU project
+and the Free Software Foundation
+have done an impressive amount
+for the world of open source
+and those achievements should be recognized.
+He has serious issues, however,
+and should not be seen as incorruptible,
+which is a common sentiment in many newer entrants
+into the Free Software movement.</p>
+<p>I do believe that opinionated and uncompromising people
+are necessary to push the FOSS community even further;
+however, people who are rude, provocative, and insulting
+to other members of the FOSS community --
+people that ought to be allies instead of enemies --
+are dangerous and have more potential
+to cause harm than good.</p>
+</blockquote>
+<p>And then if you plugged my blog at the end
+that would also be nice.</p>
+
+  <p>
+        Tags:
+          <a href="https://codetriangle.me/tags/dev-community/">#dev-community</a>
+          <a href="https://codetriangle.me/tags/rms/">#rms</a>
+  </p>
+  </main>
+<footer>
+	&copy; CodeTriangle / Richard Snider<br>
+	<a href="/contact">Contact</a> &bull;
+	<a href="https://github.com/CodeTriangle">GitHub</a> &bull;
+	<a href="https://linkedin.com/in/codetriangle">LinkedIn</a>
+	<br>
+	The canonical version of this webpage
+	is at <a href="https://codetriangle.me">https://codetriangle.me</a>.
+</footer>
+</body>
+</html>
