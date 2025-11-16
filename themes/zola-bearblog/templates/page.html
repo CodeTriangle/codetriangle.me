@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block main %}
+  <main>
   {%- if not page.extra.menu %}
     <h1>{{ page.title }}</h1>
     {%- if page.date %}
@@ -41,9 +42,7 @@
       </ol>
     {% endif %}
   {%- endif %}
-  <main>
-    {{ page.content | safe }}
-  </main>
+  {{ page.content | safe }}
   <p>
     {%- if page.taxonomies %}
       {%- for name, taxon in page.taxonomies %}
@@ -54,4 +53,5 @@
       {%- endfor %}
     {%- endif %}
   </p>
+  </main>
 {% endblock %}
