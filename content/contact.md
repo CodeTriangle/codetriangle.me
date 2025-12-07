@@ -16,4 +16,4 @@ in the following ways:
 * IRC (I'm Trigon on libera.chat),
 * Matrix (I'm @codetriangle:matrix.org)
 * Lame, non-self-hosted email
-  (reuben dot staley at google's email service, you know the one).
+  (lighthousemaniac at google's email service, you know the one).
