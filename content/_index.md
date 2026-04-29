@@ -21,7 +21,10 @@ Only after that did I started considering
 what kind of stuff I could write
 that would be worthwhile.
 I eventually decided that the content of this site
-should be split into two sections.
+should be split into
+a few different sections,
+the number of which
+has grown over the years.
 
 The [projects](@/projects/_index.md) page
 quickly became a valuable resource
@@ -50,12 +53,12 @@ on this site in the future:
 * Software minimalism
 * Unix-like operating systems
 * Text editing
-* Text encoding
-* Network protocols
+* Networking
 * Microcontrollers
+* Esoteric programming languages
 * Nintendo games and consoles
 * Indie games
-* Competitive Splatoon
 * The works of Brandon Sanderson
 * Webcomics
 * Animation
+* Linguistics and constructed languages
