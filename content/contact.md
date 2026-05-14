@@ -15,5 +15,6 @@ in the following ways:
 * Discord (@codetriangle — I accept DM requests),
 * IRC (I'm Trigon on libera.chat),
 * Matrix (I'm @codetriangle:matrix.org)
+* Signal (@codetriangle.03)
 * Lame, non-self-hosted email
   (lighthousemaniac at google's email service, you know the one).
